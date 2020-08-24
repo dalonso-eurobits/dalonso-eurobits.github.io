@@ -1,0 +1,1927 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/favicon.ico"/>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gatling.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/all_sessions.js"></script>
+<script type="text/javascript" src="js/stats.js"></script>
+<script type="text/javascript" src="js/highstock.js"></script>
+<script type="text/javascript" src="js/highcharts-more.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/unpack.js"></script>
+<title>Gatling Stats - Global Information</title>
+</head>
+<body>
+<div class="frise"></div>
+<div class="container details">
+    <div class="head">
+        <a class="logo" href="https://gatling.io" target="blank_" title="Gatling Home Page"><img alt="Gatling" src="style/logo.svg"/></a>
+        <div class="frontline"><a href="https://gatling.io/gatling-frontline/?report" target="_blank">Get more features with Gatling FrontLine</a></div>
+    </div>
+    <div class="main">
+        <div class="cadre">
+                <div class="onglet">
+                    <img src="style/cible.png" />
+                    <p><span>aggrestsimulation</span></p>
+                </div>
+                <div class="content">
+                    <div class="sous-menu">
+                        <div class="item ouvert"><a href="index.html">GLOBAL</a></div>
+                        <div class="item "><a id="details_link" href="#">DETAILS</a></div>
+                        <script type="text/javascript">
+                          var timestamp = 1597918996396;
+                          var runStartHumanDate = moment(timestamp).format("YYYY-MM-DD HH:mm:ss Z");
+                          document.writeln("<p class='sim_desc' title='"+ runStartHumanDate +", duration : 442 seconds' data-content=''>");
+                          document.writeln("<b>" + runStartHumanDate + ", duration : 442 seconds </b>");
+                          document.writeln("</p>");
+                        </script>
+                    </div>
+                    <div class="content-in">
+                        <h1><span>> </span>Global Information</h1>
+                        <div class="article">
+                            
+            <div class="schema polar">
+              <div id="container_number_of_requests"></div>
+            </div>
+
+            <div class="schema demi">
+              <div id="container_indicators" class="demi"></div>
+            </div>
+
+                        <div class="statistics extensible-geant collapsed">
+                            <div class="title">
+                                <div class="right">
+                                    <span class="expand-all-button">Expand all groups</span> | <span class="collapse-all-button">Collapse all groups</span>
+                                </div>
+                                <div id="statistics_title" class="title_collapsed">STATISTICS <span>(Click here to show more)</span></div>
+                            </div>
+                            <table id="container_statistics_head" class="statistics-in extensible-geant">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" id="col-1" class="header sortable sorted-up"><span>Requests</span></th>
+                                        <th colspan="5" class="header"><span class="executions">Executions</span></th>
+                                        <th colspan="8" class="header"><span class="response-time">Response Time (ms)</span></th>
+                                    </tr>
+                                    <tr>
+                                        <th id="col-2" class="header sortable"><span>Total</span></th>
+                                        <th id="col-3" class="header sortable"><span>OK</span></th>
+                                        <th id="col-4" class="header sortable"><span>KO</span></th>
+                                        <th id="col-5" class="header sortable"><span>% KO</span></th>
+                                        <th id="col-6" class="header sortable"><span>Cnt/s</span></th>
+                                        <th id="col-7" class="header sortable"><span>Min</span></th>
+<th id="col-8" class="header sortable"><span>50th pct</span></th>
+<th id="col-9" class="header sortable"><span>75th pct</span></th>
+<th id="col-10" class="header sortable"><span>95th pct</span></th>
+<th id="col-11" class="header sortable"><span>99th pct</span></th>
+<th id="col-12" class="header sortable"><span>Max</span></th>
+<th id="col-13" class="header sortable"><span>Mean</span></th>
+<th id="col-14" class="header sortable"><span>Std Dev</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="scrollable">
+                                <table id="container_statistics_body" class="statistics-in extensible-geant">
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+<div class="statistics extensible-geant collapsed">
+    <div class="title">
+        <div class="title_collapsed" style="cursor: auto;">ERRORS</div>
+    </div>
+    <table id="container_errors" class="statistics-in extensible-geant">
+        <thead>
+            <tr>
+                <th id="error-col-1" class="header sortable"><span>Error</span></th>
+                <th id="error-col-2" class="header sortable"><span>Count</span></th>
+                <th id="error-col-3" class="header sortable"><span>Percentage</span></th>
+            </tr>
+        </thead>
+		<tbody>
+		    
+		    <tr>
+		    	<td class="error-col-1 total">i.n.c.ConnectTimeoutException: connection timed out: swarm-uat.eurobits.local/192.168.81.34:8880<span class="value" style="display:none">0</span></td>
+		    	<td class="value error-col-2 total">161</td>
+		    	<td class="value error-col-3 total">38.795 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">i.g.h.c.i.RequestTimeoutException: Request timeout to swarm-uat.eurobits.local/192.168.81.34:8880 after 60000 ms<span class="value" style="display:none">1</span></td>
+		    	<td class="value error-col-2 total">50</td>
+		    	<td class="value error-col-3 total">12.048 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.i.IOException: Premature close<span class="value" style="display:none">2</span></td>
+		    	<td class="value error-col-2 total">14</td>
+		    	<td class="value error-col-3 total">3.373 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.is(R000), but actually found R900<span class="value" style="display:none">3</span></td>
+		    	<td class="value error-col-2 total">9</td>
+		    	<td class="value error-col-3 total">2.169 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">i.n.h.c.TooLongFrameException: An HTTP line is larger than 4096 bytes.<span class="value" style="display:none">4</span></td>
+		    	<td class="value error-col-2 total">7</td>
+		    	<td class="value error-col-3 total">1.687 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.NumberFormatException: For input string: &quot;&quot;<span class="value" style="display:none">5</span></td>
+		    	<td class="value error-col-2 total">2</td>
+		    	<td class="value error-col-3 total">0.482 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: DJ`&Uacute;&shy;<span class="value" style="display:none">6</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xf2  at [Source: (SequenceInputStream); line: 1, column: 7866]<span class="value" style="display:none">7</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &iexcl;<span class="value" style="display:none">8</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: N&plusmn;<span class="value" style="display:none">9</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 23)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 36857]<span class="value" style="display:none">10</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 26)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 9124]<span class="value" style="display:none">11</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 12)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 48193]<span class="value" style="display:none">12</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x6f  at [Source: (SequenceInputStream); line: 1, column: 48185]<span class="value" style="display:none">13</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: AP&Icirc;:B&para;&middot;B&Mu;&Ouml;4{&amp;R&iquest;;+^W&THORN;&Ouml;&THORN;<span class="value" style="display:none">14</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: W&Iacute;\1.1<span class="value" style="display:none">15</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: ]&gt;<span class="value" style="display:none">16</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 14)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 49444]<span class="value" style="display:none">17</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Uuml;NUQ<span class="value" style="display:none">18</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D&Ograve;<span class="value" style="display:none">19</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D!UCI<span class="value" style="display:none">20</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 2)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 9762]<span class="value" style="display:none">21</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 14)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 15429]<span class="value" style="display:none">22</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('`' (code 96)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')  at [Source: (SequenceInputStream); line: 1, column: 3452]<span class="value" style="display:none">23</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('I' (code 73)): was expecting double-quote to start field name  at [Source: (SequenceInputStream); line: 1, column: 25504]<span class="value" style="display:none">24</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Iuml;&Ocirc;Y&Atilde;V&Icirc;&shy;|&amp;<span class="value" style="display:none">25</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 30)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 22998]<span class="value" style="display:none">26</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&sup3;' (code 179)): was expecting comma to separate Object entries  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">27</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &ordf;&Euml;&Iacute;&sup1;&Egrave;&quot;Q&Egrave;&sup1;L &Ecirc;&Aring;ZJ&laquo;&Ograve;&Ugrave;R&Yuml;&acute;&sup2;U&Ccedil;C&frac12;&Yuml;U;@&sup3;<span class="value" style="display:none">28</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: _4&Aacute;&iquest;&Ugrave;*&amp;M &Ecirc;(&Aring;<span class="value" style="display:none">29</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 21)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 28028]<span class="value" style="display:none">30</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 28)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 14183]<span class="value" style="display:none">31</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D&Aring;&pound;&raquo;&lt;&Ocirc;G&reg;<span class="value" style="display:none">32</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 21)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 3474]<span class="value" style="display:none">33</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: B&THORN;Z&yen;J1.1<span class="value" style="display:none">34</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: L&Igrave;&Ecirc;&ordf;&sup2;&Otilde;&sup1;I&Atilde;2Y&curren;&Uacute;C&cedil;I)&sup2;&Atilde;`&reg;&raquo;'.CYAB&Aring;A&Euml;&divide;.&Ntilde;5&Otilde;&Egrave;&Icirc;LZ&Ucirc;<span class="value" style="display:none">35</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 11)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 2192]<span class="value" style="display:none">36</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 14)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 933]<span class="value" style="display:none">37</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x5  at [Source: (SequenceInputStream); line: 1, column: 7869]<span class="value" style="display:none">38</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 9)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 14167]<span class="value" style="display:none">39</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x79  at [Source: (SequenceInputStream); line: 1, column: 7237]<span class="value" style="display:none">40</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Aring;&Aacute;<span class="value" style="display:none">41</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Oslash;&para;&sup1;Q&brvbar;BV-&copy;&cedil;&iquest;D<span class="value" style="display:none">42</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x59  at [Source: (SequenceInputStream); line: 1, column: 17949]<span class="value" style="display:none">43</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &para;&sup2;<span class="value" style="display:none">44</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 34332]<span class="value" style="display:none">45</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xde  at [Source: (SequenceInputStream); line: 1, column: 7866]<span class="value" style="display:none">46</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x5b  at [Source: (SequenceInputStream); line: 1, column: 33065]<span class="value" style="display:none">47</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 11)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 54485]<span class="value" style="display:none">48</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: E&Ugrave;&frac14;&Atilde;&Agrave;&Auml;&Uuml;YM&iquest;84&Yacute;R&sect;[<span class="value" style="display:none">49</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &sup3;&Otilde;&pound;<span class="value" style="display:none">50</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 147)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')  at [Source: (SequenceInputStream); line: 1, column: 16684]<span class="value" style="display:none">51</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa1  at [Source: (SequenceInputStream); line: 1, column: 38106]<span class="value" style="display:none">52</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 3)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 33067]<span class="value" style="display:none">53</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x92  at [Source: (SequenceInputStream); line: 1, column: 21724]<span class="value" style="display:none">54</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 20)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 19206]<span class="value" style="display:none">55</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8b  at [Source: (SequenceInputStream); line: 1, column: 41884]<span class="value" style="display:none">56</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: ,*X&Iuml;&plusmn;8&yen;KA]&Ugrave;&Oacute;&Otilde;'SSJ}&Ocirc;&frac12;&Acirc;N&not;&Egrave;&uml;Z&Iuml;&sup2;<span class="value" style="display:none">57</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&Aacute;' (code 193)): was expecting a colon to separate field name and value  at [Source: (SequenceInputStream); line: 1, column: 12904]<span class="value" style="display:none">58</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xed  at [Source: (SequenceInputStream); line: 1, column: 35586]<span class="value" style="display:none">59</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xfa  at [Source: (SequenceInputStream); line: 1, column: 36844]<span class="value" style="display:none">60</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x34  at [Source: (SequenceInputStream); line: 1, column: 12906]<span class="value" style="display:none">61</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xbd  at [Source: (SequenceInputStream); line: 1, column: 2193]<span class="value" style="display:none">62</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 142)): was expecting a colon to separate field name and value  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">63</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xb6  at [Source: (SequenceInputStream); line: 1, column: 4712]<span class="value" style="display:none">64</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Mu;4&curren;&Acirc;3&Uacute;&Otilde;<span class="value" style="display:none">65</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">status.find.in(200,202), but actually found 500<span class="value" style="display:none">66</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: W&Aring;&Otilde;}3&raquo;@&not;&Aacute;&Agrave;&amp;&amp;<span class="value" style="display:none">67</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xeb  at [Source: (SequenceInputStream); line: 1, column: 10385]<span class="value" style="display:none">68</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x62  at [Source: (SequenceInputStream); line: 1, column: 19205]<span class="value" style="display:none">69</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 24)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 29927]<span class="value" style="display:none">70</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 7)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7871]<span class="value" style="display:none">71</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 12)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 5974]<span class="value" style="display:none">72</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: PQI&Icirc;&Iuml;,&Aacute;&times;[R;&Euml;&Uuml;'&nbsp;&Ucirc;&Uuml;&THORN;H(QV&raquo;_%$WM&frac12;&Oslash;&Agrave;J&sup1;9&Eacute;EF&iquest;*J&Atilde;;&Aring;&Iacute;_&Icirc;&Otilde;&Euml;&macr;N:<span class="value" style="display:none">73</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Egrave;&Agrave;<span class="value" style="display:none">74</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: Y`&Ucirc;&Ouml;K-&Auml;&Uacute;T&Uacute;*S<span class="value" style="display:none">75</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Ucirc;&reg;_Z&pound;K&Uacute;&Ntilde;<span class="value" style="display:none">76</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: )G&frac14;&Iuml;/&THORN;|RV&Eacute;&pound;&THORN;&Ucirc;E~RD5&divide;L&Ouml;&Ograve;$&Mu;&Yacute;<span class="value" style="display:none">77</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xfa  at [Source: (SequenceInputStream); line: 1, column: 7232]<span class="value" style="display:none">78</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 22)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 19205]<span class="value" style="display:none">79</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 7)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 40625]<span class="value" style="display:none">80</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 12908]<span class="value" style="display:none">81</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 19209]<span class="value" style="display:none">82</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x3  at [Source: (SequenceInputStream); line: 1, column: 19205]<span class="value" style="display:none">83</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x62  at [Source: (SequenceInputStream); line: 1, column: 22985]<span class="value" style="display:none">84</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 23)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 25505]<span class="value" style="display:none">85</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 16)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 62046]<span class="value" style="display:none">86</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: -&iquest;&nbsp;V&Uacute;&Uuml;<span class="value" style="display:none">87</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('!' (code 33)): was expecting double-quote to start field name  at [Source: (SequenceInputStream); line: 1, column: 2192]<span class="value" style="display:none">88</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 3)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">89</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 1)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 2192]<span class="value" style="display:none">90</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 142)): was expecting comma to separate Array entries  at [Source: (SequenceInputStream); line: 1, column: 3452]<span class="value" style="display:none">91</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 25)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7869]<span class="value" style="display:none">92</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: W<span class="value" style="display:none">93</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: SSA&Iacute;&Ouml;&Ucirc;5&para;(&cent;CM&iquest;&Ntilde;&cedil;&Ugrave;<span class="value" style="display:none">94</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &macr;&macr;&Uacute;W^&nbsp;FU&Igrave;&Agrave;OC9{&Yuml;&Oslash;&Iacute;&sect;!<span class="value" style="display:none">95</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 18)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 25508]<span class="value" style="display:none">96</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 30)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 63306]<span class="value" style="display:none">97</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 6)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 33064]<span class="value" style="display:none">98</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xd3  at [Source: (SequenceInputStream); line: 1, column: 7872]<span class="value" style="display:none">99</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8e  at [Source: (SequenceInputStream); line: 1, column: 16685]<span class="value" style="display:none">100</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&egrave;' (code 232)): was expecting comma to separate Object entries  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">101</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x29  at [Source: (SequenceInputStream); line: 1, column: 24246]<span class="value" style="display:none">102</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 16)): has to be escaped using backslash to be included in string value  at [Source: (SequenceInputStream); line: 1, column: 9124]<span class="value" style="display:none">103</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x8  at [Source: (SequenceInputStream); line: 1, column: 64566]<span class="value" style="display:none">104</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Agrave;&Egrave;&Ograve;DA^I<span class="value" style="display:none">105</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &sect;&Ecirc;+&Ccedil;E[JI<span class="value" style="display:none">106</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&AElig;' (code 198)): was expecting a colon to separate field name and value  at [Source: (SequenceInputStream); line: 1, column: 11644]<span class="value" style="display:none">107</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unrecognized character escape 'C' (code 67)  at [Source: (SequenceInputStream); line: 1, column: 5974]<span class="value" style="display:none">108</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: Q&Otilde;B&not;$&Atilde;&sup3;75&copy;Q&Auml;&AElig;&ETH;5&deg;&Eacute;&quot;Z &ordm;&Mu;$<span class="value" style="display:none">109</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xb2  at [Source: (SequenceInputStream); line: 1, column: 7865]<span class="value" style="display:none">110</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 8)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7866]<span class="value" style="display:none">111</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xfc  at [Source: (SequenceInputStream); line: 1, column: 7232]<span class="value" style="display:none">112</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 16)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7870]<span class="value" style="display:none">113</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 25)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 4723]<span class="value" style="display:none">114</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Ugrave;&Mu;&cent;@&Oacute;&Auml;XI&Igrave;$&ordf;\&Euml;6&quot;&Egrave;&curren;&Agrave;&reg;&frac12;&Ograve;D&Otilde;;&macr;&AElig;&AElig;%&yen;A&para;=&Auml;=&Ouml;&sup2;&Uacute;TPK&macr;&Aring;L&Ugrave;&AElig;/R:<span class="value" style="display:none">115</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('a' (code 97)): was expecting comma to separate Object entries  at [Source: (SequenceInputStream); line: 1, column: 35586]<span class="value" style="display:none">116</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Acirc;}&Oacute;&Agrave;&uml;<span class="value" style="display:none">117</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &nbsp;J]&amp;&Uuml;&THORN;O&cedil;:&Ocirc;&frac14;BQ&Ecirc;&Iacute;|TBD[&Icirc;YU{&Oslash;<span class="value" style="display:none">118</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('-' (code 45)): was expecting comma to separate Object entries  at [Source: (SequenceInputStream); line: 1, column: 2193]<span class="value" style="display:none">119</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x24  at [Source: (SequenceInputStream); line: 1, column: 35586]<span class="value" style="display:none">120</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D&lt;&macr;I&Ucirc;C&lt;&Ntilde;&Uacute;&Ccedil;&acute;&ETH;&Oacute;&Aring;&macr;Y&pound;J;~&para;&Icirc;E&Ugrave;&frac34;U8&middot;|HO,&iexcl;AM4&lt;-(&Acirc;]PF:&Ugrave;R+8&Ocirc;E=BLOCK<span class="value" style="display:none">121</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: 8?N&sup1;&not;&Ccedil;&uml;&iquest;&Icirc;&para;J&deg;&Euml;4H&Ccedil;D&frac12;&ordm;,&Ccedil;&lt;$)&quot;<span class="value" style="display:none">122</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Iuml;KYJ&Acirc;J&acute;'&Oacute;&Yacute;&Igrave;R!??$&Agrave;&cedil;&gt;QK&Acirc;G]&Otilde;&Egrave;&THORN;&sup1;&Uuml;&Ucirc;EV7SS<span class="value" style="display:none">123</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: DMRC&Igrave;&ETH;&Aacute;?O&Uuml;&Ouml;&Iuml;&ETH;&Iuml;JQ&AElig;&laquo;`E&sect;&para;&uml;&plusmn;[D9[&Uuml;-2&nbsp;&Atilde;&raquo;SE&raquo;:&THORN;&Iuml;KEP&iquest;&Iuml;P&Yacute;&gt;&nbsp;&Euml;&iquest;<span class="value" style="display:none">124</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: ,4.&Acirc;&Acirc;&Aacute;&Ecirc;C_<span class="value" style="display:none">125</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8c  at [Source: (SequenceInputStream); line: 1, column: 7865]<span class="value" style="display:none">126</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Aring;P,&Euml;&Ccedil;B*&ordm;&Uuml;Q]JJ&Egrave;I&plusmn;&copy;=R&Ugrave;4&Mu;P&Otilde;&Acirc;&Agrave;L&Aacute;U&Aacute;6&ETH;<span class="value" style="display:none">127</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 5972]<span class="value" style="display:none">128</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &copy;Q&Ccedil;&Iuml;&Acirc;1$K&Ecirc;#2Y&Auml;&Ntilde;2&sect;&cedil;&pound;F&Yacute;AO&Otilde;&copy;&shy;C&times;1N&Auml;1N5&THORN;&Egrave;&Ntilde;&Ugrave;D0&Agrave;&Agrave;&Ocirc;A<span class="value" style="display:none">129</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 3)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 53228]<span class="value" style="display:none">130</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&amp;' (code 38)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')  at [Source: (SequenceInputStream); line: 1, column: 34324]<span class="value" style="display:none">131</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 2)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 937]<span class="value" style="display:none">132</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xb7  at [Source: (SequenceInputStream); line: 1, column: 31804]<span class="value" style="display:none">133</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D&THORN;&Aring;&Auml;$&Agrave;&Icirc;F;)S6&Uuml;&ordm;E!&Oslash;VH&Egrave;[FZX&Acirc;&ordm;&Icirc;&Igrave;2&Iacute;;<span class="value" style="display:none">134</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 31)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">135</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Auml;&Otilde;]6&frac34;&reg;~ ^&middot;Y'J&copy;&plusmn;&Uacute;`&Icirc;C&Acirc;&cedil;!H\&curren;&Aring;&Ugrave;&Iacute;&copy;O&Aring;&Yuml;7&acute;<span class="value" style="display:none">136</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x9b  at [Source: (SequenceInputStream); line: 1, column: 39364]<span class="value" style="display:none">137</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xff  at [Source: (SequenceInputStream); line: 1, column: 7865]<span class="value" style="display:none">138</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 22)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7868]<span class="value" style="display:none">139</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: L[&Agrave;,|*SPS&Acirc;&frac12;&Agrave;#&AElig;&Yacute;XSS&Uacute;~&Uuml;H&AElig;&Uacute;&sup1;<span class="value" style="display:none">140</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Ecirc;U{T&Ograve;&frac12;;Q&AElig;<span class="value" style="display:none">141</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('A' (code 65)): was expecting a colon to separate field name and value  at [Source: (SequenceInputStream); line: 1, column: 3452]<span class="value" style="display:none">142</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Ograve;&iexcl;&sup3;B&Uacute;&reg;&brvbar;&Otilde;&laquo;+&Ucirc;&gt;&Egrave;W&Euml;&gt;,&Uacute;&Ouml;&Oslash;<span class="value" style="display:none">143</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 2)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 10386]<span class="value" style="display:none">144</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.i.JsonEOFException: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (SequenceInputStream); line: 1, column: 5961])  at [Source: (SequenceInputStream); line: 1, column: 17077]<span class="value" style="display:none">145</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Egrave;&Aring;6&Uuml;&uml;&Acirc;&Oacute;7&Eacute;&lt;B&Egrave;&Egrave;*5?<span class="value" style="display:none">146</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x82  at [Source: (SequenceInputStream); line: 1, column: 9124]<span class="value" style="display:none">147</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 13)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 38107]<span class="value" style="display:none">148</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: DNE&Igrave;&Auml;&Aring;&Ugrave;<span class="value" style="display:none">149</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 2)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 25516]<span class="value" style="display:none">150</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x6d  at [Source: (SequenceInputStream); line: 1, column: 16685]<span class="value" style="display:none">151</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 20474]<span class="value" style="display:none">152</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 17)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 2192]<span class="value" style="display:none">153</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: $P<span class="value" style="display:none">154</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unrecognized character escape 'o' (code 111)  at [Source: (SequenceInputStream); line: 1, column: 30565]<span class="value" style="display:none">155</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 2)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 934]<span class="value" style="display:none">156</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 3)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7871]<span class="value" style="display:none">157</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 24247]<span class="value" style="display:none">158</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x7  at [Source: (SequenceInputStream); line: 1, column: 38106]<span class="value" style="display:none">159</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&lt;' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')  at [Source: (SequenceInputStream); line: 1, column: 17944]<span class="value" style="display:none">160</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D<span class="value" style="display:none">161</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &ETH;&Ecirc;IM<span class="value" style="display:none">162</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal character ((CTRL-CHAR, code 5)): only regular white space (\r, \n, \t) is allowed between tokens  at [Source: (SequenceInputStream); line: 1, column: 7864]<span class="value" style="display:none">163</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x88  at [Source: (SequenceInputStream); line: 1, column: 34324]<span class="value" style="display:none">164</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('%' (code 37)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')  at [Source: (SequenceInputStream); line: 1, column: 9124]<span class="value" style="display:none">165</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: 6} &Ugrave;&raquo;&Aring;O&macr;&iquest;C&Yacute;&Atilde;&ordf;1 W&Oslash;N&Egrave;-/&Ocirc;NNH&acute;$&frac12;&frac34;&Ograve;&Ocirc;KB&Ecirc;&ordf;=LW&Oslash;&frac12;\&Igrave;&Ucirc;&ordf;B<span class="value" style="display:none">166</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8a  at [Source: (SequenceInputStream); line: 1, column: 34325]<span class="value" style="display:none">167</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: D&frac34;&uml;H&lt;&Oslash;&acute;&Otilde;QG;&sup2;~&Aring;<span class="value" style="display:none">168</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &macr;&iexcl;&Eacute;<span class="value" style="display:none">169</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 132)): was expecting a colon to separate field name and value  at [Source: (SequenceInputStream); line: 1, column: 25504]<span class="value" style="display:none">170</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 26)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 7273]<span class="value" style="display:none">171</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('Q' (code 81)): was expecting double-quote to start field name  at [Source: (SequenceInputStream); line: 1, column: 9124]<span class="value" style="display:none">172</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 18)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 40624]<span class="value" style="display:none">173</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &middot;&ordf;B3&Ucirc;&Iacute;[B&Otilde;&Agrave;&frac14;G&ETH;UX&sup3;EY&copy;`<span class="value" style="display:none">174</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 19)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 936]<span class="value" style="display:none">175</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: UZ&Aring;&Euml;&ETH;D&Iacute;&copy;&Auml;&brvbar;<span class="value" style="display:none">176</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name  at [Source: (SequenceInputStream); line: 1, column: 945]<span class="value" style="display:none">177</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.241 %</td>
+		    </tr>
+		</tbody>
+    </table>
+</div>
+
+            <div class="schema geant">
+              <a name="active_users"></a>
+              <div id="container_active_users" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <div id="container_distrib" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <div id="container" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <a name="requests"></a>
+                <div id="container_requests" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <a name="responses"></a>
+                <div id="container_responses" class="geant"></div>
+            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul></ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var pageStats = stats.stats;
+    $(document).ready(function() {
+        $('.sim_desc').popover({trigger:'hover', placement:'bottom'});
+        setDetailsLinkUrl();
+        setGlobalMenu();
+        setActiveMenu();
+        fillStats(pageStats);
+        
+function numberOfRequestsDataForGroup(group) {
+  var data = {names: [], oks: [], kos: []};
+
+  $.each(group.contents, function(contentName, content) {
+    if (content.type == 'GROUP') {
+      var result = numberOfRequestsDataForGroup(content);
+      data.names = data.names.concat(result.names);
+      data.oks = data.oks.concat(result.oks);
+      data.kos = data.kos.concat(result.kos);
+    }
+    else if (content.type == 'REQUEST') {
+      data.names.push(content.path);
+      data.oks.push(parseInt(content.stats.numberOfRequests.ok));
+      data.kos.push(parseInt(content.stats.numberOfRequests.ko));
+    }
+  });
+
+  return data;
+}
+
+var numberOfRequestsData = numberOfRequestsDataForGroup(stats);
+
+new Highcharts.Chart({
+  chart: {
+    renderTo:'container_number_of_requests',
+    polar:true,
+    type:'column',
+    height:330
+  },
+  credits:{
+    enabled:false
+  },
+  title:{
+    text:'<span class="chart_title">Number of requests</span>',
+    useHTML: true
+  },
+  xAxis:{
+    tickmarkPlacement:'on',
+    tickInterval: 1,
+    categories:numberOfRequestsData.names,
+    labels:{ enabled:false }
+  },
+  yAxis:{
+    min:0
+  },
+  plotOptions:{
+    series:{
+      stacking:'normal',
+      groupPadding:0,
+      pointPlacement:'on',
+      shadow: true
+    }
+  },
+  legend: {
+    	borderWidth: 0.5,
+      borderRadius: 3,
+      borderColor: 'black',
+      itemStyle: { fontWeight: "normal" }
+  },
+  series:[
+    {
+      name:'KO',
+      data:numberOfRequestsData.kos,
+      color:"#FF0000"
+    },
+    {
+      name:'OK',
+      data:numberOfRequestsData.oks,
+      color:"#4572A7"
+    }
+  ]
+});
+
+Highcharts.setOptions({
+  global: { useUTC: false }
+});
+
+var indicatorsChart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'container_indicators',
+    marginRight: 150
+  },
+  credits: { enabled: false },
+  legend: { enabled: false },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  xAxis: {
+    categories: [
+      pageStats.group1.name,
+      pageStats.group2.name,
+      pageStats.group3.name,
+      pageStats.group4.name
+    ]
+  },
+  yAxis: {
+    title: { text: 'Number of Requests' }
+  },
+  tooltip: {
+    formatter: function() {
+      var s;
+      if (this.point.name) { // the pie chart
+        s = ''+ this.point.name +': '+ this.y +'% requests';
+      } else {
+        s = ''+ this.y + ' requests';
+      }
+      return s;
+    }
+  },
+  plotOptions: {
+    series: {
+      stacking: 'normal',
+      shadow: true
+    }
+  },
+  series: [
+    {
+      type: 'column',
+      data: [{
+      	color: '#A0B228',
+      	y: pageStats.group1.count
+      },
+      {
+      	color: '#FFDD00',
+      	y: pageStats.group2.count
+      },
+      {
+      	color: '#FF9D00',
+      	y: pageStats.group3.count
+      },
+      {
+      	color: '#FF0000',
+      	y: pageStats.group4.count
+      }]
+    },
+    {
+      type: 'pie',
+      name: 'Percentages',
+      data: [
+        {
+          name: pageStats.group1.name,
+          y: pageStats.group1.percentage,
+          color: '#A0B228'
+        },
+        {
+          name: pageStats.group2.name,
+          y: pageStats.group2.percentage,
+          color: '#FFDD00'
+        },
+        {
+          name: pageStats.group3.name,
+          y: pageStats.group3.percentage,
+          color: '#FF9D00'
+        },
+        {
+          name: pageStats.group4.name,
+          y: pageStats.group4.percentage,
+          color: '#FF0000'
+        }
+      ],
+      center: [470, 85],
+      size: 100,
+      showInLegend: false,
+      dataLabels: { enabled: false }
+    }
+  ]
+});
+
+indicatorsChart.setTitle({
+  text: '<span class="chart_title">Indicators</span>',
+  useHTML: true
+});
+
+	    $('#container_exceptions').sortable('#container_exceptions');
+    
+
+  function shortenNameAndDisplayFullOnHover(name){
+   if (name.length < 20)
+       return name;
+   else
+     return "<span class='tooltipContent'>"+name+"</span>" + name.substr(0,8)+"..."+name.substr(name.length-8,name.length);
+  }
+
+function generateHtmlRow(request, level, index, parent, group) {
+    if (request.name == 'Global Information')
+        var url = 'index.html';
+    else
+        var url = request.pathFormatted + '.html';
+
+    if (group)
+        var expandButtonStyle = '';
+    else
+        var expandButtonStyle = ' hidden';
+
+    if (request.stats.numberOfRequests.total != 0)
+        var koPercent = (request.stats.numberOfRequests.ko * 100 / request.stats.numberOfRequests.total).toFixed(0) + '%';
+    else
+        var koPercent = '-'
+
+    return '<tr id="' + request.pathFormatted + '" class="child-of-' + parent + '"> \
+        <td class="total col-1"> \
+            <span id="' + request.pathFormatted + '" style="margin-left: ' + (level * 10) + 'px;" class="expand-button' + expandButtonStyle + '">&nbsp;</span> \
+            <a href="' + url +'" class="withTooltip">' + shortenNameAndDisplayFullOnHover(request.name) + '</a><span class="value" style="display:none;">' + index + '</span> \
+        </td> \
+        <td class="value total col-2">' + request.stats.numberOfRequests.total + '</td> \
+        <td class="value ok col-3">' + request.stats.numberOfRequests.ok + '</td> \
+        <td class="value ko col-4">' + request.stats.numberOfRequests.ko + '</td> \
+        <td class="value ko col-5">' + koPercent + '</td> \
+        <td class="value total col-6">' + request.stats.meanNumberOfRequestsPerSecond.total + '</td> \
+        <td class="value total col-7">' + request.stats.minResponseTime.total + '</td> \
+        <td class="value total col-8">' + request.stats.percentiles1.total + '</td> \
+        <td class="value total col-9">' + request.stats.percentiles2.total + '</td> \
+        <td class="value total col-10">' + request.stats.percentiles3.total + '</td> \
+        <td class="value total col-11">' + request.stats.percentiles4.total + '</td> \
+        <td class="value total col-12">' + request.stats.maxResponseTime.total + '</td> \
+        <td class="value total col-13">' + request.stats.meanResponseTime.total + '</td> \
+        <td class="value total col-14">' + request.stats.standardDeviation.total + '</td> \
+        </tr>';
+}
+
+function generateHtmlRowsForGroup(group, level, index, parent) {
+    var buffer = '';
+
+    if (!parent)
+        parent = 'ROOT';
+    else {
+        buffer += generateHtmlRow(group, level - 1, index, parent, true);
+        index++;
+        parent = group.pathFormatted;
+    }
+
+    $.each(group.contents, function(contentName, content) {
+        if (content.type == 'GROUP') {
+            var result = generateHtmlRowsForGroup(content, level + 1, index, parent);
+            buffer += result.html;
+            index = result.index;
+        }
+        else if (content.type == 'REQUEST') {
+            buffer += generateHtmlRow(content, level, index, parent);
+            index++;
+        }
+    });
+
+    return { html: buffer, index: index };
+}
+
+$('#container_statistics_head tbody').append(generateHtmlRow(stats, 0, 0));
+
+var lines = generateHtmlRowsForGroup(stats, 0, 0)
+$('#container_statistics_body tbody').append(lines.html);
+
+$('#container_statistics_head').sortable('#container_statistics_body');
+$('.statistics').expandable();
+
+if (lines.index < 30) {
+    $('#statistics_title span').attr('style', 'display: none;');
+    $('#statistics_title').attr('style', 'cursor: auto;')
+}
+else {
+    $('#statistics_title').click(function(){
+        $(this).toggleClass('title_collapsed').toggleClass('title_not_collapsed');
+        $('#container_statistics_body').parent().toggleClass('scrollable').toggleClass('');
+    });
+}
+
+	    $('#container_errors').sortable('#container_errors');
+    
+allUsersData.yAxis = 0;
+
+var allUsersChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container_active_users',
+    zoomType: 'x'
+  },
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    align: 'right',
+    verticalAlign: 'top',
+    layout: 'vertical',
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  rangeSelector: {
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+        },
+        select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis: {
+    title: { text: 'Number of Active Users' },
+    opposite: false,
+    min: 0
+  },
+  series: [
+    {
+color: '#4572A7',
+name: 'AggRestSimulationFintonicProducts',
+data: [
+  [1597918998000,0],[1597918999000,0],[1597919000000,0],[1597919001000,0],[1597919002000,0],[1597919003000,0],[1597919004000,0],[1597919005000,0],[1597919006000,0],[1597919007000,0],[1597919008000,58],[1597919009000,120],[1597919010000,180],[1597919011000,240],[1597919012000,301],[1597919013000,360],[1597919014000,420],[1597919015000,480],[1597919016000,541],[1597919017000,600],[1597919018000,660],[1597919019000,720],[1597919020000,771],[1597919021000,793],[1597919022000,796],[1597919023000,811],[1597919024000,823],[1597919025000,850],[1597919026000,862],[1597919027000,880],[1597919028000,913],[1597919029000,941],[1597919030000,973],[1597919031000,1010],[1597919032000,1045],[1597919033000,1070],[1597919034000,1101],[1597919035000,1134],[1597919036000,1141],[1597919037000,1142],[1597919038000,1168],[1597919039000,1190],[1597919040000,1237],[1597919041000,1254],[1597919042000,1280],[1597919043000,1291],[1597919044000,1298],[1597919045000,1306],[1597919046000,1304],[1597919047000,1307],[1597919048000,1330],[1597919049000,1345],[1597919050000,1367],[1597919051000,1383],[1597919052000,1428],[1597919053000,1475],[1597919054000,1484],[1597919055000,1477],[1597919056000,1503],[1597919057000,1522],[1597919058000,1518],[1597919059000,1539],[1597919060000,1566],[1597919061000,1567],[1597919062000,1553],[1597919063000,1559],[1597919064000,1590],[1597919065000,1619],[1597919066000,1617],[1597919067000,1648],[1597919068000,1649],[1597919069000,1678],[1597919070000,1700],[1597919071000,1704],[1597919072000,1707],[1597919073000,1718],[1597919074000,1704],[1597919075000,1718],[1597919076000,1730],[1597919077000,1764],[1597919078000,1800],[1597919079000,1789],[1597919080000,1785],[1597919081000,1791],[1597919082000,1788],[1597919083000,1794],[1597919084000,1814],[1597919085000,1838],[1597919086000,1837],[1597919087000,1829],[1597919088000,1854],[1597919089000,1878],[1597919090000,1882],[1597919091000,1890],[1597919092000,1898],[1597919093000,1901],[1597919094000,1921],[1597919095000,1957],[1597919096000,1970],[1597919097000,1992],[1597919098000,2010],[1597919099000,2025],[1597919100000,2037],[1597919101000,2039],[1597919102000,2008],[1597919103000,1986],[1597919104000,1955],[1597919105000,1940],[1597919106000,1850],[1597919107000,1793],[1597919108000,1790],[1597919109000,1809],[1597919110000,1791],[1597919111000,1761],[1597919112000,1770],[1597919113000,1795],[1597919114000,1830],[1597919115000,1873],[1597919116000,1904],[1597919117000,1925],[1597919118000,1951],[1597919119000,1971],[1597919120000,1967],[1597919121000,1971],[1597919122000,1993],[1597919123000,2019],[1597919124000,2050],[1597919125000,2087],[1597919126000,2099],[1597919127000,2053],[1597919128000,2057],[1597919129000,2079],[1597919130000,2118],[1597919131000,2144],[1597919132000,2166],[1597919133000,2191],[1597919134000,2230],[1597919135000,2273],[1597919136000,2250],[1597919137000,2257],[1597919138000,2271],[1597919139000,2283],[1597919140000,2304],[1597919141000,2323],[1597919142000,2348],[1597919143000,2357],[1597919144000,2382],[1597919145000,2410],[1597919146000,2443],[1597919147000,2465],[1597919148000,2432],[1597919149000,2461],[1597919150000,2483],[1597919151000,2486],[1597919152000,2459],[1597919153000,2471],[1597919154000,2479],[1597919155000,2488],[1597919156000,2505],[1597919157000,2525],[1597919158000,2483],[1597919159000,2497],[1597919160000,2512],[1597919161000,2527],[1597919162000,2546],[1597919163000,2540],[1597919164000,2507],[1597919165000,2502],[1597919166000,2499],[1597919167000,2531],[1597919168000,2545],[1597919169000,2557],[1597919170000,2554],[1597919171000,2576],[1597919172000,2578],[1597919173000,2552],[1597919174000,2551],[1597919175000,2568],[1597919176000,2557],[1597919177000,2579],[1597919178000,2587],[1597919179000,2589],[1597919180000,2617],[1597919181000,2636],[1597919182000,2640],[1597919183000,2657],[1597919184000,2669],[1597919185000,2688],[1597919186000,2692],[1597919187000,2718],[1597919188000,2722],[1597919189000,2726],[1597919190000,2753],[1597919191000,2786],[1597919192000,2774],[1597919193000,2758],[1597919194000,2771],[1597919195000,2799],[1597919196000,2805],[1597919197000,2787],[1597919198000,2828],[1597919199000,2861],[1597919200000,2887],[1597919201000,2872],[1597919202000,2911],[1597919203000,2941],[1597919204000,2940],[1597919205000,2934],[1597919206000,2949],[1597919207000,2967],[1597919208000,2998],[1597919209000,3033],[1597919210000,3048],[1597919211000,3046],[1597919212000,3031],[1597919213000,3023],[1597919214000,2994],[1597919215000,3037],[1597919216000,3047],[1597919217000,3051],[1597919218000,3058],[1597919219000,3033],[1597919220000,3069],[1597919221000,3098],[1597919222000,3111],[1597919223000,3121],[1597919224000,3114],[1597919225000,3111],[1597919226000,3098],[1597919227000,3102],[1597919228000,3110],[1597919229000,3101],[1597919230000,3120],[1597919231000,3136],[1597919232000,3166],[1597919233000,3206],[1597919234000,3207],[1597919235000,3214],[1597919236000,3218],[1597919237000,3211],[1597919238000,3213],[1597919239000,3216],[1597919240000,3246],[1597919241000,3273],[1597919242000,3296],[1597919243000,3310],[1597919244000,3327],[1597919245000,3347],[1597919246000,3397],[1597919247000,3423],[1597919248000,3407],[1597919249000,3379],[1597919250000,3396],[1597919251000,3401],[1597919252000,3402],[1597919253000,3437],[1597919254000,3422],[1597919255000,3430],[1597919256000,3464],[1597919257000,3490],[1597919258000,3516],[1597919259000,3505],[1597919260000,3529],[1597919261000,3562],[1597919262000,3596],[1597919263000,3605],[1597919264000,3635],[1597919265000,3669],[1597919266000,3674],[1597919267000,3695],[1597919268000,3726],[1597919269000,3737],[1597919270000,3720],[1597919271000,3703],[1597919272000,3694],[1597919273000,3666],[1597919274000,3688],[1597919275000,3692],[1597919276000,3703],[1597919277000,3676],[1597919278000,3650],[1597919279000,3622],[1597919280000,3621],[1597919281000,3643],[1597919282000,3663],[1597919283000,3680],[1597919284000,3693],[1597919285000,3714],[1597919286000,3738],[1597919287000,3752],[1597919288000,3786],[1597919289000,3787],[1597919290000,3822],[1597919291000,3845],[1597919292000,3846],[1597919293000,3861],[1597919294000,3813],[1597919295000,3812],[1597919296000,3833],[1597919297000,3842],[1597919298000,3873],[1597919299000,3881],[1597919300000,3888],[1597919301000,3885],[1597919302000,3886],[1597919303000,3867],[1597919304000,3880],[1597919305000,3888],[1597919306000,3892],[1597919307000,3907],[1597919308000,3857],[1597919309000,3801],[1597919310000,3744],[1597919311000,3637],[1597919312000,3592],[1597919313000,3547],[1597919314000,3506],[1597919315000,3454],[1597919316000,3387],[1597919317000,3281],[1597919318000,3242],[1597919319000,3206],[1597919320000,3134],[1597919321000,3040],[1597919322000,2961],[1597919323000,2910],[1597919324000,2868],[1597919325000,2822],[1597919326000,2776],[1597919327000,2712],[1597919328000,2663],[1597919329000,2601],[1597919330000,2544],[1597919331000,2482],[1597919332000,2435],[1597919333000,2401],[1597919334000,2331],[1597919335000,2295],[1597919336000,2246],[1597919337000,2137],[1597919338000,2080],[1597919339000,2053],[1597919340000,2004],[1597919341000,1961],[1597919342000,1907],[1597919343000,1829],[1597919344000,1774],[1597919345000,1677],[1597919346000,1622],[1597919347000,1588],[1597919348000,1483],[1597919349000,1414],[1597919350000,1361],[1597919351000,1291],[1597919352000,1258],[1597919353000,1195],[1597919354000,1127],[1597919355000,1083],[1597919356000,990],[1597919357000,938],[1597919358000,899],[1597919359000,869],[1597919360000,836],[1597919361000,809],[1597919362000,778],[1597919363000,758],[1597919364000,737],[1597919365000,686],[1597919366000,641],[1597919367000,590],[1597919368000,537],[1597919369000,489],[1597919370000,454],[1597919371000,431],[1597919372000,422],[1597919373000,409],[1597919374000,402],[1597919375000,373],[1597919376000,343],[1597919377000,328],[1597919378000,310],[1597919379000,297],[1597919380000,268],[1597919381000,253],[1597919382000,245],[1597919383000,239],[1597919384000,239],[1597919385000,237],[1597919386000,235],[1597919387000,230],[1597919388000,227],[1597919389000,221],[1597919390000,218],[1597919391000,215],[1597919392000,208],[1597919393000,205],[1597919394000,204],[1597919395000,203],[1597919396000,202],[1597919397000,195],[1597919398000,184],[1597919399000,176],[1597919400000,166],[1597919401000,133],[1597919402000,102],[1597919403000,94],[1597919404000,94],[1597919405000,86],[1597919406000,84],[1597919407000,84],[1597919408000,82],[1597919409000,81],[1597919410000,81],[1597919411000,81],[1597919412000,81],[1597919413000,81],[1597919414000,81],[1597919415000,79],[1597919416000,79],[1597919417000,79],[1597919418000,78],[1597919419000,77],[1597919420000,77],[1597919421000,77],[1597919422000,77],[1597919423000,77],[1597919424000,77],[1597919425000,77],[1597919426000,77],[1597919427000,75],[1597919428000,54],[1597919429000,47],[1597919430000,47],[1597919431000,47],[1597919432000,47],[1597919433000,47],[1597919434000,47],[1597919435000,47],[1597919436000,47],[1597919437000,27],[1597919438000,1]
+],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }},
+{
+color: '#A0B228',
+name: 'AggRestSimulationLogin',
+data: [
+  [1597918998000,1],[1597918999000,0],[1597919000000,0],[1597919001000,0],[1597919002000,0],[1597919003000,0],[1597919004000,0],[1597919005000,0],[1597919006000,0],[1597919007000,0],[1597919008000,0],[1597919009000,0],[1597919010000,0],[1597919011000,0],[1597919012000,0],[1597919013000,0],[1597919014000,0],[1597919015000,0],[1597919016000,0],[1597919017000,0],[1597919018000,0],[1597919019000,0],[1597919020000,0],[1597919021000,0],[1597919022000,0],[1597919023000,0],[1597919024000,0],[1597919025000,0],[1597919026000,0],[1597919027000,0],[1597919028000,0],[1597919029000,0],[1597919030000,0],[1597919031000,0],[1597919032000,0],[1597919033000,0],[1597919034000,0],[1597919035000,0],[1597919036000,0],[1597919037000,0],[1597919038000,0],[1597919039000,0],[1597919040000,0],[1597919041000,0],[1597919042000,0],[1597919043000,0],[1597919044000,0],[1597919045000,0],[1597919046000,0],[1597919047000,0],[1597919048000,0],[1597919049000,0],[1597919050000,0],[1597919051000,0],[1597919052000,0],[1597919053000,0],[1597919054000,0],[1597919055000,0],[1597919056000,0],[1597919057000,0],[1597919058000,0],[1597919059000,0],[1597919060000,0],[1597919061000,0],[1597919062000,0],[1597919063000,0],[1597919064000,0],[1597919065000,0],[1597919066000,0],[1597919067000,0],[1597919068000,0],[1597919069000,0],[1597919070000,0],[1597919071000,0],[1597919072000,0],[1597919073000,0],[1597919074000,0],[1597919075000,0],[1597919076000,0],[1597919077000,0],[1597919078000,0],[1597919079000,0],[1597919080000,0],[1597919081000,0],[1597919082000,0],[1597919083000,0],[1597919084000,0],[1597919085000,0],[1597919086000,0],[1597919087000,0],[1597919088000,0],[1597919089000,0],[1597919090000,0],[1597919091000,0],[1597919092000,0],[1597919093000,0],[1597919094000,0],[1597919095000,0],[1597919096000,0],[1597919097000,0],[1597919098000,0],[1597919099000,0],[1597919100000,0],[1597919101000,0],[1597919102000,0],[1597919103000,0],[1597919104000,0],[1597919105000,0],[1597919106000,0],[1597919107000,0],[1597919108000,0],[1597919109000,0],[1597919110000,0],[1597919111000,0],[1597919112000,0],[1597919113000,0],[1597919114000,0],[1597919115000,0],[1597919116000,0],[1597919117000,0],[1597919118000,0],[1597919119000,0],[1597919120000,0],[1597919121000,0],[1597919122000,0],[1597919123000,0],[1597919124000,0],[1597919125000,0],[1597919126000,0],[1597919127000,0],[1597919128000,0],[1597919129000,0],[1597919130000,0],[1597919131000,0],[1597919132000,0],[1597919133000,0],[1597919134000,0],[1597919135000,0],[1597919136000,0],[1597919137000,0],[1597919138000,0],[1597919139000,0],[1597919140000,0],[1597919141000,0],[1597919142000,0],[1597919143000,0],[1597919144000,0],[1597919145000,0],[1597919146000,0],[1597919147000,0],[1597919148000,0],[1597919149000,0],[1597919150000,0],[1597919151000,0],[1597919152000,0],[1597919153000,0],[1597919154000,0],[1597919155000,0],[1597919156000,0],[1597919157000,0],[1597919158000,0],[1597919159000,0],[1597919160000,0],[1597919161000,0],[1597919162000,0],[1597919163000,0],[1597919164000,0],[1597919165000,0],[1597919166000,0],[1597919167000,0],[1597919168000,0],[1597919169000,0],[1597919170000,0],[1597919171000,0],[1597919172000,0],[1597919173000,0],[1597919174000,0],[1597919175000,0],[1597919176000,0],[1597919177000,0],[1597919178000,0],[1597919179000,0],[1597919180000,0],[1597919181000,0],[1597919182000,0],[1597919183000,0],[1597919184000,0],[1597919185000,0],[1597919186000,0],[1597919187000,0],[1597919188000,0],[1597919189000,0],[1597919190000,0],[1597919191000,0],[1597919192000,0],[1597919193000,0],[1597919194000,0],[1597919195000,0],[1597919196000,0],[1597919197000,0],[1597919198000,0],[1597919199000,0],[1597919200000,0],[1597919201000,0],[1597919202000,0],[1597919203000,0],[1597919204000,0],[1597919205000,0],[1597919206000,0],[1597919207000,0],[1597919208000,0],[1597919209000,0],[1597919210000,0],[1597919211000,0],[1597919212000,0],[1597919213000,0],[1597919214000,0],[1597919215000,0],[1597919216000,0],[1597919217000,0],[1597919218000,0],[1597919219000,0],[1597919220000,0],[1597919221000,0],[1597919222000,0],[1597919223000,0],[1597919224000,0],[1597919225000,0],[1597919226000,0],[1597919227000,0],[1597919228000,0],[1597919229000,0],[1597919230000,0],[1597919231000,0],[1597919232000,0],[1597919233000,0],[1597919234000,0],[1597919235000,0],[1597919236000,0],[1597919237000,0],[1597919238000,0],[1597919239000,0],[1597919240000,0],[1597919241000,0],[1597919242000,0],[1597919243000,0],[1597919244000,0],[1597919245000,0],[1597919246000,0],[1597919247000,0],[1597919248000,0],[1597919249000,0],[1597919250000,0],[1597919251000,0],[1597919252000,0],[1597919253000,0],[1597919254000,0],[1597919255000,0],[1597919256000,0],[1597919257000,0],[1597919258000,0],[1597919259000,0],[1597919260000,0],[1597919261000,0],[1597919262000,0],[1597919263000,0],[1597919264000,0],[1597919265000,0],[1597919266000,0],[1597919267000,0],[1597919268000,0],[1597919269000,0],[1597919270000,0],[1597919271000,0],[1597919272000,0],[1597919273000,0],[1597919274000,0],[1597919275000,0],[1597919276000,0],[1597919277000,0],[1597919278000,0],[1597919279000,0],[1597919280000,0],[1597919281000,0],[1597919282000,0],[1597919283000,0],[1597919284000,0],[1597919285000,0],[1597919286000,0],[1597919287000,0],[1597919288000,0],[1597919289000,0],[1597919290000,0],[1597919291000,0],[1597919292000,0],[1597919293000,0],[1597919294000,0],[1597919295000,0],[1597919296000,0],[1597919297000,0],[1597919298000,0],[1597919299000,0],[1597919300000,0],[1597919301000,0],[1597919302000,0],[1597919303000,0],[1597919304000,0],[1597919305000,0],[1597919306000,0],[1597919307000,0],[1597919308000,0],[1597919309000,0],[1597919310000,0],[1597919311000,0],[1597919312000,0],[1597919313000,0],[1597919314000,0],[1597919315000,0],[1597919316000,0],[1597919317000,0],[1597919318000,0],[1597919319000,0],[1597919320000,0],[1597919321000,0],[1597919322000,0],[1597919323000,0],[1597919324000,0],[1597919325000,0],[1597919326000,0],[1597919327000,0],[1597919328000,0],[1597919329000,0],[1597919330000,0],[1597919331000,0],[1597919332000,0],[1597919333000,0],[1597919334000,0],[1597919335000,0],[1597919336000,0],[1597919337000,0],[1597919338000,0],[1597919339000,0],[1597919340000,0],[1597919341000,0],[1597919342000,0],[1597919343000,0],[1597919344000,0],[1597919345000,0],[1597919346000,0],[1597919347000,0],[1597919348000,0],[1597919349000,0],[1597919350000,0],[1597919351000,0],[1597919352000,0],[1597919353000,0],[1597919354000,0],[1597919355000,0],[1597919356000,0],[1597919357000,0],[1597919358000,0],[1597919359000,0],[1597919360000,0],[1597919361000,0],[1597919362000,0],[1597919363000,0],[1597919364000,0],[1597919365000,0],[1597919366000,0],[1597919367000,0],[1597919368000,0],[1597919369000,0],[1597919370000,0],[1597919371000,0],[1597919372000,0],[1597919373000,0],[1597919374000,0],[1597919375000,0],[1597919376000,0],[1597919377000,0],[1597919378000,0],[1597919379000,0],[1597919380000,0],[1597919381000,0],[1597919382000,0],[1597919383000,0],[1597919384000,0],[1597919385000,0],[1597919386000,0],[1597919387000,0],[1597919388000,0],[1597919389000,0],[1597919390000,0],[1597919391000,0],[1597919392000,0],[1597919393000,0],[1597919394000,0],[1597919395000,0],[1597919396000,0],[1597919397000,0],[1597919398000,0],[1597919399000,0],[1597919400000,0],[1597919401000,0],[1597919402000,0],[1597919403000,0],[1597919404000,0],[1597919405000,0],[1597919406000,0],[1597919407000,0],[1597919408000,0],[1597919409000,0],[1597919410000,0],[1597919411000,0],[1597919412000,0],[1597919413000,0],[1597919414000,0],[1597919415000,0],[1597919416000,0],[1597919417000,0],[1597919418000,0],[1597919419000,0],[1597919420000,0],[1597919421000,0],[1597919422000,0],[1597919423000,0],[1597919424000,0],[1597919425000,0],[1597919426000,0],[1597919427000,0],[1597919428000,0],[1597919429000,0],[1597919430000,0],[1597919431000,0],[1597919432000,0],[1597919433000,0],[1597919434000,0],[1597919435000,0],[1597919436000,0],[1597919437000,0],[1597919438000,0]
+],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }},
+
+    allUsersData
+  ]
+});
+
+
+allUsersChart.setTitle({
+  text: '<span class="chart_title">Active Users along the Simulation</span>',
+  useHTML: true
+});
+
+allUsersData.yAxis = 1;
+
+var responseTimeDistributionChart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'container_distrib',
+    type: 'column'
+  },
+  credits: {
+    enabled: false
+  },
+  legend: {
+    enabled: true,
+    floating: true,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: {
+      fontWeight: "normal"
+    }
+  },
+  title: {
+    text: 'A title to let highcharts reserve the place for the title set later'
+  },
+  xAxis: {
+    categories: ['300', '900', '1500', '2100', '2700', '3301', '3901', '4501', '5101', '5701', '6301', '6901', '7501', '8101', '8702', '9302', '9902', '10502', '11102', '11702', '12302', '12902', '13502', '14103', '14703', '15303', '15903', '16503', '17103', '17703', '18303', '18903', '19504', '20104', '20704', '21304', '21904', '22504', '23104', '23704', '24304', '24905', '25505', '26105', '26705', '27305', '27905', '28505', '29105', '29705', '30306', '30906', '31506', '32106', '32706', '33306', '33906', '34506', '35106', '35707', '36307', '36907', '37507', '38107', '38707', '39307', '39907', '40507', '41108', '41708', '42308', '42908', '43508', '44108', '44708', '45308', '45908', '46509', '47109', '47709', '48309', '48909', '49509', '50109', '50709', '51309', '51910', '52510', '53110', '53710', '54310', '54910', '55510', '56110', '56710', '57311', '57911', '58511', '59111', '59711'],
+    tickInterval: 20
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Percentage of Requests'
+    }
+  },
+  tooltip: {
+    formatter: function() {
+      return '<b>'+ this.x +' ms</b><br/>'+
+      this.series.name +': '+ this.y +' %<br/>'+
+      'Total: '+ this.point.stackTotal + ' %';
+    }
+  },
+  plotOptions: {
+    series: {
+      groupPadding: 0,
+      stacking: 'normal',
+      shadow: true
+    }
+  },
+  series: [
+  	{
+type: 'column',
+color: '#4572A7',
+name: 'OK',
+data: [
+  68.19,24.71,4.57,1.07,0.39,0.23,0.13,0.1,0.07,0.05,0.02,0.02,0.01,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.03,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+],
+tooltip: { yDecimals: 0, ySuffix: 'ms' }
+},
+  	{
+type: 'column',
+color: '#FF0000',
+name: 'KO',
+data: [
+  0.06,0.05,0.01,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.12,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.03
+],
+tooltip: { yDecimals: 0, ySuffix: 'ms' }
+}
+  ]
+});
+
+responseTimeDistributionChart.setTitle({
+  text: '<span class="chart_title">Response Time Distribution</span>',
+  useHTML: true
+});
+
+var responseTimePercentiles = unpack([[1597918998,[86,86,86,86,86,86,86,86,86,86]],[1597918999,null],[1597919000,null],[1597919001,null],[1597919002,null],[1597919003,null],[1597919004,null],[1597919005,null],[1597919006,null],[1597919007,null],[1597919008,[210,254,304,479,519,540,583,717,869,930]],[1597919009,[229,416,474,689,706,744,772,804,924,1025]],[1597919010,[321,403,464,553,571,604,619,669,811,856]],[1597919011,[340,450,487,585,612,628,658,677,762,767]],[1597919012,[364,558,656,783,796,810,893,979,1547,1584]],[1597919013,[451,607,672,735,751,769,813,866,931,937]],[1597919014,[451,519,583,658,671,697,720,823,872,881]],[1597919015,[443,517,576,630,640,678,745,792,934,958]],[1597919016,[494,562,610,676,705,726,757,764,857,882]],[1597919017,[458,526,606,733,762,821,898,963,1101,1173]],[1597919018,[119,561,640,721,748,830,878,1031,1481,1641]],[1597919019,[122,397,727,912,952,1032,1100,1296,1541,1986]],[1597919020,[117,234,668,831,867,920,973,1132,1274,2062]],[1597919021,[118,345,660,732,749,771,843,996,1704,1762]],[1597919022,[120,508,651,753,813,854,916,1062,1730,2102]],[1597919023,[116,184,586,696,727,785,868,990,1700,1865]],[1597919024,[112,204,616,735,764,800,906,1059,1913,2536]],[1597919025,[124,200,669,762,820,866,971,1127,1666,1808]],[1597919026,[117,180,606,676,685,702,763,825,1597,1773]],[1597919027,[113,168,661,788,810,850,939,1075,1823,1859]],[1597919028,[134,194,679,740,766,864,1096,1627,1990,2851]],[1597919029,[127,178,640,766,802,882,940,1008,1845,2360]],[1597919030,[115,175,633,762,816,846,935,1118,1969,2013]],[1597919031,[110,191,701,845,896,982,1133,1297,1623,2894]],[1597919032,[124,201,681,894,963,1043,1206,1397,1871,20428]],[1597919033,[133,219,840,931,972,1020,1106,1307,2093,2187]],[1597919034,[157,261,930,1058,1087,1118,1190,1353,1839,2066]],[1597919035,[118,213,670,807,844,892,924,1049,1519,1601]],[1597919036,[106,155,582,650,667,686,719,786,1094,1725]],[1597919037,[107,164,683,935,967,1006,1066,1173,1928,2123]],[1597919038,[148,252,810,991,1049,1210,1314,2008,2973,3228]],[1597919039,[153,328,1325,1550,1574,1595,1649,1927,2288,2475]],[1597919040,[272,378,1053,1282,1318,1381,1419,1519,2329,2404]],[1597919041,[144,307,1057,1311,1383,1417,1461,1764,2054,3140]],[1597919042,[229,326,1050,1268,1330,1369,1452,1586,2161,2779]],[1597919043,[137,313,1065,1238,1282,1316,1350,1465,2085,2279]],[1597919044,[245,308,1096,1239,1259,1297,1335,1493,1973,3355]],[1597919045,[144,257,836,973,1012,1079,1162,1396,1743,2262]],[1597919046,[135,205,758,895,953,1015,1139,1636,2209,2319]],[1597919047,[135,288,1113,1410,1465,1507,1593,1716,2139,2418]],[1597919048,[167,361,901,1157,1200,1262,1301,1392,1642,1756]],[1597919049,[137,217,676,787,808,832,892,1009,1640,1715]],[1597919050,[131,164,641,715,737,746,774,837,1346,1562]],[1597919051,[129,163,268,973,1071,1177,1260,1498,1867,2339]],[1597919052,[213,348,1273,1450,1483,1534,1575,1780,1966,2036]],[1597919053,[153,292,480,972,1019,1075,1202,1342,1694,3463]],[1597919054,[137,211,673,801,834,863,944,1033,1435,1933]],[1597919055,[125,164,617,774,837,886,956,1061,1516,1963]],[1597919056,[134,167,623,741,760,788,829,945,1195,1660]],[1597919057,[119,160,600,689,716,783,858,1042,1612,3289]],[1597919058,[119,173,642,768,789,824,917,1015,2030,2498]],[1597919059,[128,178,364,916,988,1020,1063,1161,1727,2020]],[1597919060,[131,206,695,824,851,895,944,1054,1338,1662]],[1597919061,[117,164,612,703,729,756,793,873,1097,1549]],[1597919062,[121,165,635,725,754,782,835,888,1763,2052]],[1597919063,[128,176,650,799,818,850,949,1071,2219,2423]],[1597919064,[126,183,681,1067,1110,1160,1237,1350,1750,3460]],[1597919065,[155,282,864,1078,1129,1200,1286,1520,2237,2308]],[1597919066,[148,267,1082,1323,1392,1487,1579,2004,4043,6649]],[1597919067,[179,338,706,1276,1488,1793,2161,3219,5978,10159]],[1597919068,[159,313,784,1118,1172,1455,1762,2076,3745,19631]],[1597919069,[148,281,722,1089,1248,1336,1573,1921,2887,16039]],[1597919070,[144,296,701,943,1036,1198,1358,1714,2530,3903]],[1597919071,[129,236,633,941,987,1140,1338,1771,2437,19321]],[1597919072,[135,386,924,1200,1250,1375,1491,1826,2479,3228]],[1597919073,[127,293,647,907,1020,1119,1323,1695,2405,3043]],[1597919074,[136,216,571,807,839,887,968,1044,1817,2158]],[1597919075,[136,187,709,1061,1157,1191,1290,1475,2117,2315]],[1597919076,[200,288,351,1312,1355,1402,1477,1601,2042,2101]],[1597919077,[202,277,474,1118,1152,1208,1317,1509,2103,3011]],[1597919078,[142,238,728,909,973,1059,1175,1306,1861,2312]],[1597919079,[138,185,673,778,818,893,953,1135,1928,19376]],[1597919080,[133,179,661,788,815,844,899,964,1496,1768]],[1597919081,[120,162,210,712,737,782,844,981,1632,2005]],[1597919082,[123,169,654,743,776,805,856,929,1109,1595]],[1597919083,[130,167,635,756,780,844,892,987,1517,19305]],[1597919084,[130,179,225,779,818,853,923,1029,1768,19392]],[1597919085,[125,176,681,776,810,848,899,1009,1406,2511]],[1597919086,[130,163,652,735,769,804,831,894,1056,1709]],[1597919087,[124,167,383,755,780,820,853,937,1206,1345]],[1597919088,[131,173,233,767,814,857,899,1055,1754,2409]],[1597919089,[128,173,259,762,806,844,882,966,1333,1874]],[1597919090,[126,162,634,739,772,822,873,951,1272,1839]],[1597919091,[123,168,231,739,785,825,865,920,1380,3095]],[1597919092,[128,170,614,726,762,785,824,887,1260,1667]],[1597919093,[127,170,216,723,765,804,864,925,1471,1727]],[1597919094,[118,157,191,718,756,790,836,895,1264,1601]],[1597919095,[122,156,222,684,712,740,792,874,1180,1609]],[1597919096,[114,154,206,690,731,778,831,913,1552,2032]],[1597919097,[113,152,198,726,761,812,847,935,1208,2112]],[1597919098,[124,171,562,737,797,862,930,1098,1673,2128]],[1597919099,[130,227,458,995,1020,1049,1081,1116,1589,1918]],[1597919100,[142,225,685,844,874,928,975,1042,1275,1489]],[1597919101,[96,177,547,714,754,813,879,1003,1451,1955]],[1597919102,[131,208,733,865,898,925,1006,1157,1665,3254]],[1597919103,[129,215,657,797,821,867,977,1175,1866,3128]],[1597919104,[59,199,459,731,772,826,907,1087,1577,1768]],[1597919105,[93,183,503,694,725,758,818,937,1366,1830]],[1597919106,[47,122,344,465,504,545,603,710,1012,1689]],[1597919107,[77,143,484,668,728,805,908,1040,1395,2050]],[1597919108,[120,180,610,803,861,929,1045,1224,1913,2037]],[1597919109,[124,204,687,892,943,984,1051,1184,1742,1893]],[1597919110,[116,165,557,729,776,811,858,957,1669,1901]],[1597919111,[117,164,211,716,741,804,843,922,1540,1731]],[1597919112,[115,144,562,731,754,813,854,915,1354,1651]],[1597919113,[112,156,190,688,753,797,843,967,1654,1746]],[1597919114,[119,157,194,763,793,843,886,1030,1705,19498]],[1597919115,[123,153,187,736,765,811,886,981,1494,1762]],[1597919116,[122,161,209,727,748,800,842,907,1447,2263]],[1597919117,[128,158,615,775,820,873,918,1046,1485,1704]],[1597919118,[123,182,638,761,781,822,869,1007,1908,2015]],[1597919119,[133,169,664,794,833,870,934,1025,1647,1811]],[1597919120,[124,162,196,726,755,793,828,942,1319,19412]],[1597919121,[122,154,176,791,837,908,1016,1162,1502,2180]],[1597919122,[133,219,375,1039,1106,1169,1283,1560,2067,2627]],[1597919123,[143,311,363,1566,1617,1674,1750,1839,2104,2415]],[1597919124,[294,401,446,1311,1401,1466,1540,1646,1963,2123]],[1597919125,[151,242,711,977,1024,1085,1165,1246,1540,1819]],[1597919126,[123,181,638,773,800,848,883,973,1514,2011]],[1597919127,[127,167,646,770,810,854,897,984,1652,2168]],[1597919128,[125,189,662,1046,1118,1214,1422,1579,2401,2562]],[1597919129,[226,301,481,1407,1444,1521,1600,1726,2032,2089]],[1597919130,[139,253,327,913,965,1042,1118,1236,2078,2401]],[1597919131,[124,186,244,988,1082,1155,1319,1457,2234,2476]],[1597919132,[165,322,404,1394,1449,1471,1562,1708,2147,3107]],[1597919133,[197,288,372,1259,1344,1434,1551,1737,2306,2971]],[1597919134,[201,359,1229,1490,1531,1589,1655,1732,1946,2156]],[1597919135,[143,289,367,881,979,1018,1104,1203,1485,1902]],[1597919136,[113,181,282,966,1045,1128,1233,1330,1856,2359]],[1597919137,[179,266,777,1404,1509,1653,1910,2446,4038,19563]],[1597919138,[156,340,592,1024,1118,1210,1381,1959,2874,3925]],[1597919139,[129,206,580,938,1026,1089,1199,1525,2267,3051]],[1597919140,[112,190,310,697,798,903,1067,1526,2031,19748]],[1597919141,[130,205,274,707,770,854,948,1046,1307,1829]],[1597919142,[116,160,555,721,751,779,827,889,1138,1264]],[1597919143,[112,143,176,636,697,747,790,923,1548,2498]],[1597919144,[98,160,317,838,993,1093,1237,1438,1786,2216]],[1597919145,[165,293,349,1011,1094,1165,1236,1274,1545,19333]],[1597919146,[118,198,270,759,804,837,891,979,1213,1475]],[1597919147,[97,156,477,702,729,772,805,907,1255,1748]],[1597919148,[99,141,171,612,682,731,756,814,1082,1878]],[1597919149,[108,158,216,705,760,809,856,942,1173,19487]],[1597919150,[62,122,202,474,519,570,629,697,916,1586]],[1597919151,[43,91,135,367,406,450,496,581,782,19370]],[1597919152,[84,132,212,740,784,854,935,1053,1317,1989]],[1597919153,[93,147,238,591,635,675,767,889,1495,1863]],[1597919154,[102,143,197,632,676,716,776,857,1045,19342]],[1597919155,[113,151,577,707,756,809,879,982,1809,2022]],[1597919156,[115,186,228,765,814,888,948,1047,1365,1618]],[1597919157,[125,166,415,701,741,812,893,978,1709,2057]],[1597919158,[114,164,230,723,759,834,921,1018,1378,2029]],[1597919159,[106,169,232,718,791,883,980,1122,1734,19305]],[1597919160,[120,162,210,708,748,810,885,1002,1299,1813]],[1597919161,[115,165,199,759,806,869,939,1050,1655,2313]],[1597919162,[124,207,759,958,1020,1068,1158,1272,1623,2077]],[1597919163,[120,192,411,865,929,994,1082,1197,1635,2164]],[1597919164,[128,177,260,761,827,908,973,1097,1732,1914]],[1597919165,[112,158,249,713,763,821,886,994,1874,2691]],[1597919166,[116,151,180,665,723,784,898,1082,1592,2490]],[1597919167,[108,163,269,831,897,983,1087,1279,2085,2511]],[1597919168,[147,301,440,1264,1307,1394,1463,1762,2468,2545]],[1597919169,[122,297,386,1033,1081,1160,1296,1612,2293,19408]],[1597919170,[142,248,306,1016,1053,1090,1162,1274,1867,2250]],[1597919171,[123,203,264,860,912,969,1052,1184,1626,19514]],[1597919172,[119,197,653,844,883,923,960,1093,1753,19333]],[1597919173,[121,211,375,1100,1165,1217,1283,1398,1714,1846]],[1597919174,[153,276,335,851,942,1018,1096,1198,1491,1671]],[1597919175,[72,153,230,613,647,691,767,928,1715,19253]],[1597919176,[96,142,192,692,740,784,836,922,1252,1986]],[1597919177,[120,168,211,715,770,827,903,1030,1397,19276]],[1597919178,[95,147,188,639,700,754,805,955,1512,3782]],[1597919179,[94,134,166,597,655,711,806,944,1865,2127]],[1597919180,[111,157,199,688,740,796,838,992,1222,1658]],[1597919181,[102,156,201,639,687,728,817,909,1046,1878]],[1597919182,[87,136,179,629,668,705,737,802,957,1601]],[1597919183,[95,142,187,531,584,629,683,796,948,1679]],[1597919184,[60,112,139,458,501,580,639,737,1691,2954]],[1597919185,[92,135,177,570,623,680,760,819,979,1918]],[1597919186,[102,146,174,642,697,801,879,951,1349,2202]],[1597919187,[105,164,227,707,755,812,920,1114,1523,1739]],[1597919188,[101,235,288,1006,1055,1089,1133,1197,1551,2894]],[1597919189,[127,236,319,1176,1300,1405,1567,1775,2043,2643]],[1597919190,[230,324,477,1267,1343,1412,1489,1583,1740,1814]],[1597919191,[130,210,304,862,913,1005,1088,1179,1331,1714]],[1597919192,[135,209,276,805,844,911,963,1024,1115,1308]],[1597919193,[126,183,223,660,693,732,797,876,1364,2712]],[1597919194,[91,162,200,733,774,805,882,981,1316,19331]],[1597919195,[113,166,218,679,715,762,805,892,1132,19469]],[1597919196,[95,131,154,577,616,639,696,738,1088,1829]],[1597919197,[102,130,151,611,670,728,760,843,1327,19360]],[1597919198,[109,156,190,696,738,835,892,998,1313,1525]],[1597919199,[112,164,216,708,783,857,954,1140,1636,1834]],[1597919200,[105,153,503,674,709,752,835,948,1638,2485]],[1597919201,[115,170,366,878,1138,1288,1408,1527,2089,2559]],[1597919202,[221,292,348,1189,1269,1354,1463,1606,1792,2369]],[1597919203,[155,275,353,792,845,913,967,1067,1237,19365]],[1597919204,[107,162,200,659,708,768,811,929,1095,2172]],[1597919205,[100,142,184,582,638,693,811,946,1659,4557]],[1597919206,[77,160,246,538,594,673,775,1051,2101,3045]],[1597919207,[49,128,193,580,645,829,1215,1923,2875,4238]],[1597919208,[47,261,501,889,1018,1145,1250,1648,2471,3747]],[1597919209,[127,245,414,888,993,1216,1470,1751,2248,2540]],[1597919210,[112,181,381,801,850,885,997,1182,1773,19312]],[1597919211,[116,149,202,679,709,744,807,873,1078,1962]],[1597919212,[114,160,203,727,784,848,935,1062,1326,2089]],[1597919213,[110,172,206,697,743,790,880,1048,1745,2393]],[1597919214,[118,218,322,979,1085,1163,1221,1299,1585,19396]],[1597919215,[128,190,259,794,892,1011,1107,1214,1889,2172]],[1597919216,[113,211,279,944,1011,1076,1172,1254,1413,1995]],[1597919217,[143,204,270,797,852,897,951,1030,1219,19267]],[1597919218,[101,157,210,581,610,649,711,839,1155,19286]],[1597919219,[70,110,148,523,582,649,740,879,1788,23975]],[1597919220,[103,139,198,711,777,878,1032,1197,1787,2627]],[1597919221,[129,224,319,807,882,969,1015,1087,1400,1884]],[1597919222,[103,152,197,639,691,752,809,907,1323,1720]],[1597919223,[107,169,275,721,765,838,958,1125,1458,1728]],[1597919224,[116,167,238,674,729,777,863,1036,1822,3483]],[1597919225,[97,159,219,693,725,783,863,1041,1564,2331]],[1597919226,[108,167,211,738,788,831,887,1038,1279,1733]],[1597919227,[115,165,214,683,745,824,945,1069,1413,1715]],[1597919228,[116,159,206,665,702,758,892,1029,1831,1981]],[1597919229,[115,171,203,677,738,782,838,1017,1502,1952]],[1597919230,[100,143,189,634,706,766,808,1010,1255,1860]],[1597919231,[113,157,192,666,746,807,872,1108,1702,2343]],[1597919232,[113,160,208,701,757,832,959,1207,1872,2111]],[1597919233,[121,182,251,756,832,916,1112,1443,2044,19639]],[1597919234,[114,179,277,668,758,850,1039,1329,2748,7199]],[1597919235,[98,142,264,615,711,812,1017,1629,5918,9569]],[1597919236,[107,168,530,780,917,1205,1605,3017,6077,10339]],[1597919237,[108,147,348,756,969,1382,2507,3788,8807,12963]],[1597919238,[102,166,618,1476,2274,2914,3164,3942,7722,10465]],[1597919239,[109,167,620,1118,1300,2035,2680,4049,6623,7956]],[1597919240,[165,221,572,1063,1492,1910,2437,4096,7317,8394]],[1597919241,[134,198,772,1561,1992,3310,4159,5938,6915,7346]],[1597919242,[110,191,560,1309,2714,3387,4348,5431,6380,8372]],[1597919243,[112,191,699,1890,2875,3266,4331,4893,5915,6701]],[1597919244,[164,258,963,2093,2601,2902,3947,4477,6121,7051]],[1597919245,[164,452,1564,2089,2708,2876,3465,4286,5411,5922]],[1597919246,[254,364,1318,2255,2462,3045,3806,4351,5270,7688]],[1597919247,[142,296,997,1634,1992,2594,2941,3624,5415,6819]],[1597919248,[140,241,820,1412,2004,2408,2949,3393,6291,19950]],[1597919249,[148,225,726,1350,1612,1860,2149,3317,4711,5497]],[1597919250,[158,214,418,1037,1230,1441,1994,3342,3953,4388]],[1597919251,[135,204,426,1628,1864,2070,2339,2866,3303,3642]],[1597919252,[313,453,525,864,1731,1881,2014,2230,2569,3533]],[1597919253,[392,462,515,1179,1271,1358,1485,1871,3080,3514]],[1597919254,[113,245,336,1052,1222,1505,1600,1908,2665,3029]],[1597919255,[262,343,393,1545,1614,1666,1736,1848,1981,2223]],[1597919256,[305,426,476,1075,1168,1276,1357,1434,1546,1633]],[1597919257,[128,212,302,691,767,820,904,1059,1288,1590]],[1597919258,[89,149,196,498,553,608,674,739,872,19339]],[1597919259,[72,130,172,468,515,574,684,807,1050,1609]],[1597919260,[72,123,166,459,528,596,704,873,1010,19255]],[1597919261,[105,188,261,657,799,870,923,981,1119,1704]],[1597919262,[88,149,201,569,609,647,695,736,817,1108]],[1597919263,[66,134,177,499,582,706,838,956,1184,1973]],[1597919264,[137,211,253,470,693,797,869,1002,1151,1570]],[1597919265,[31,137,192,478,499,547,618,722,991,1375]],[1597919266,[50,87,115,396,416,446,486,547,672,1867]],[1597919267,[42,92,118,253,350,421,495,638,871,2017]],[1597919268,[97,154,209,573,631,730,838,951,1313,1999]],[1597919269,[104,161,210,638,684,739,837,995,1613,19286]],[1597919270,[99,140,187,571,613,686,740,866,1692,2782]],[1597919271,[102,148,209,616,680,745,822,917,1259,2458]],[1597919272,[91,140,225,592,653,751,916,1360,2967,7502]],[1597919273,[89,243,552,946,1113,1203,1563,2714,4648,10847]],[1597919274,[120,266,502,1018,1094,1324,1893,2707,4024,9056]],[1597919275,[96,213,432,893,1065,1228,1600,1931,2856,3965]],[1597919276,[77,242,441,665,767,841,1055,1366,1902,5005]],[1597919277,[71,145,205,534,601,663,757,886,1135,1913]],[1597919278,[102,151,196,576,622,678,752,895,1486,3012]],[1597919279,[74,121,148,459,499,570,615,720,1172,1662]],[1597919280,[70,107,131,418,456,510,554,626,830,1887]],[1597919281,[85,123,146,518,572,614,653,752,993,1748]],[1597919282,[91,134,156,556,599,648,701,764,942,1018]],[1597919283,[91,133,189,546,573,629,669,729,892,1336]],[1597919284,[96,140,166,523,572,633,679,749,1650,19344]],[1597919285,[88,131,188,458,542,593,649,754,992,1259]],[1597919286,[62,117,151,510,542,587,640,723,864,1987]],[1597919287,[101,144,192,452,614,683,786,945,1228,1566]],[1597919288,[80,155,194,563,623,698,794,939,1572,19306]],[1597919289,[106,162,214,595,761,908,1079,1198,1833,2357]],[1597919290,[176,273,324,1044,1101,1160,1214,1316,1582,3751]],[1597919291,[127,206,279,991,1104,1221,1316,1455,1604,2422]],[1597919292,[202,300,342,1266,1345,1410,1501,1591,1810,3446]],[1597919293,[73,329,384,538,632,733,830,990,1485,1651]],[1597919294,[27,72,98,259,297,318,392,497,1123,2201]],[1597919295,[71,120,152,397,470,532,590,717,1029,2793]],[1597919296,[54,112,143,429,470,522,571,662,859,2017]],[1597919297,[63,100,123,198,382,456,541,676,920,1648]],[1597919298,[76,147,193,580,627,695,794,915,1148,2038]],[1597919299,[110,164,203,641,687,761,858,961,1174,19300]],[1597919300,[110,153,191,636,667,744,821,912,1390,19300]],[1597919301,[114,158,188,676,710,759,813,882,1143,2201]],[1597919302,[123,167,208,717,749,795,883,964,1214,1744]],[1597919303,[115,161,183,665,729,779,861,957,1254,3198]],[1597919304,[119,160,200,650,698,774,853,975,1277,2586]],[1597919305,[106,173,223,650,695,765,867,1020,1711,2070]],[1597919306,[104,151,195,640,717,790,864,961,1267,2526]],[1597919307,[112,159,196,606,704,769,869,1019,1324,1831]],[1597919308,[109,161,202,434,623,689,765,852,994,1630]],[1597919309,[73,128,147,315,447,503,572,685,924,1326]],[1597919310,[37,94,128,285,337,377,436,541,750,887]],[1597919311,[25,55,61,78,83,153,208,245,298,458]],[1597919312,[21,36,57,99,117,156,201,299,404,615]],[1597919313,[29,61,73,114,156,241,274,370,626,758]],[1597919314,[48,103,124,319,348,368,406,506,779,1560]],[1597919315,[35,91,133,294,353,392,458,533,935,1185]],[1597919316,[48,91,110,293,327,357,390,455,620,1170]],[1597919317,[24,44,57,72,77,101,164,218,296,427]],[1597919318,[30,57,80,145,191,232,318,518,807,1719]],[1597919319,[97,130,163,452,498,536,608,743,1381,19319]],[1597919320,[70,102,161,366,390,407,478,573,763,1083]],[1597919321,[68,93,113,344,375,389,402,449,528,916]],[1597919322,[34,59,80,202,215,236,259,308,539,720]],[1597919323,[30,70,86,128,249,313,352,396,830,19251]],[1597919324,[24,55,83,127,167,263,309,516,957,1922]],[1597919325,[23,39,55,110,138,167,210,317,551,19264]],[1597919326,[24,55,88,197,237,276,309,383,541,23026]],[1597919327,[19,72,89,146,200,297,343,396,480,618]],[1597919328,[31,92,109,364,385,412,458,515,774,932]],[1597919329,[93,140,163,472,512,547,571,716,889,1401]],[1597919330,[90,117,128,448,477,487,500,527,650,19178]],[1597919331,[66,93,102,329,352,368,387,424,608,960]],[1597919332,[76,104,119,415,451,488,525,591,757,1011]],[1597919333,[80,129,155,405,459,508,551,583,844,1284]],[1597919334,[62,94,112,315,339,369,423,525,779,1258]],[1597919335,[53,96,126,346,387,423,491,622,994,1378]],[1597919336,[64,105,139,393,424,448,485,590,756,1164]],[1597919337,[25,42,61,115,145,179,207,282,370,501]],[1597919338,[24,40,51,73,91,119,148,184,263,518]],[1597919339,[20,49,70,108,136,174,243,297,473,621]],[1597919340,[24,78,95,294,325,357,407,590,843,1080]],[1597919341,[65,161,254,484,528,603,688,1367,2358,4380]],[1597919342,[27,75,138,331,387,495,686,872,2491,4330]],[1597919343,[27,76,136,287,333,367,507,927,1522,4140]],[1597919344,[28,76,133,214,296,376,454,624,1110,2529]],[1597919345,[25,38,58,93,108,129,166,241,478,1064]],[1597919346,[25,31,35,48,61,74,97,145,203,274]],[1597919347,[29,58,90,201,239,272,323,425,617,1054]],[1597919348,[23,52,80,157,181,217,254,337,548,801]],[1597919349,[27,52,84,145,172,223,283,398,787,1239]],[1597919350,[27,42,63,131,170,201,250,351,548,1053]],[1597919351,[24,41,66,108,154,183,193,221,408,19221]],[1597919352,[22,41,62,150,170,189,218,256,499,19216]],[1597919353,[29,48,95,196,218,247,290,415,544,928]],[1597919354,[32,57,87,168,193,300,455,601,948,1127]],[1597919355,[26,55,88,181,211,261,303,423,621,940]],[1597919356,[21,32,51,83,100,118,142,159,199,402]],[1597919357,[19,35,52,88,107,131,164,209,295,380]],[1597919358,[25,42,64,125,144,174,190,225,279,402]],[1597919359,[24,47,76,134,177,224,314,387,710,1054]],[1597919360,[20,48,74,129,148,196,221,242,321,445]],[1597919361,[16,25,33,70,92,99,117,144,285,356]],[1597919362,[18,29,37,87,93,108,130,168,217,403]],[1597919363,[20,37,82,124,142,148,163,189,231,272]],[1597919364,[18,41,72,142,182,202,241,337,473,592]],[1597919365,[21,39,70,145,173,207,241,325,498,945]],[1597919366,[18,37,59,140,173,216,256,462,552,606]],[1597919367,[21,29,36,77,111,129,140,173,289,451]],[1597919368,[21,30,58,112,132,150,182,205,467,488]],[1597919369,[21,45,59,103,143,191,225,422,737,19207]],[1597919370,[23,41,52,69,78,108,173,239,352,732]],[1597919371,[22,26,30,51,54,71,99,124,165,182]],[1597919372,[21,26,38,57,75,107,130,142,165,176]],[1597919373,[23,26,74,99,101,110,120,130,138,140]],[1597919374,[23,26,45,75,93,126,146,159,418,732]],[1597919375,[16,35,71,150,166,188,245,306,339,386]],[1597919376,[20,26,35,51,59,90,121,149,209,213]],[1597919377,[18,24,27,33,35,43,52,98,151,175]],[1597919378,[21,26,37,65,84,102,116,136,302,337]],[1597919379,[23,39,63,114,148,197,240,265,504,555]],[1597919380,[23,35,56,117,127,153,225,392,578,868]],[1597919381,[21,25,32,46,47,56,75,132,150,174]],[1597919382,[22,26,30,67,78,110,136,144,189,218]],[1597919383,[45,45,45,45,45,45,45,45,45,45]],[1597919384,[23,25,30,46,59,72,82,134,193,208]],[1597919385,[23,24,25,26,26,27,27,27,27,28]],[1597919386,[22,25,31,49,64,111,125,154,171,178]],[1597919387,[21,24,26,31,31,33,40,45,120,147]],[1597919388,[21,24,25,41,45,63,92,137,171,175]],[1597919389,[23,37,42,54,73,83,126,152,153,154]],[1597919390,[21,26,34,48,50,54,55,64,144,184]],[1597919391,[22,29,36,46,66,80,90,103,143,158]],[1597919392,[23,24,27,47,49,79,106,123,133,135]],[1597919393,[52,52,52,52,52,52,52,52,52,52]],[1597919394,[25,25,36,47,48,49,58,69,77,80]],[1597919395,[24,24,24,45,58,70,83,96,106,109]],[1597919396,[17,23,25,44,53,69,88,113,141,149]],[1597919397,[21,24,26,44,49,64,101,119,128,145]],[1597919398,[15,23,30,77,81,88,116,139,175,196]],[1597919399,[23,37,49,110,118,120,137,184,192,192]],[1597919400,[27,52,70,164,200,247,299,440,767,1064]],[1597919401,[22,31,61,102,114,135,138,158,179,190]],[1597919402,[17,29,45,82,93,116,127,149,190,192]],[1597919403,[43,43,43,43,43,43,43,43,43,43]],[1597919404,[34,46,58,89,116,135,142,149,159,162]],[1597919405,[23,35,46,95,122,140,140,141,141,142]],[1597919406,[21,23,28,41,45,57,102,145,170,177]],[1597919407,[21,24,25,27,28,29,29,32,34,34]],[1597919408,[20,23,24,43,73,94,130,163,170,170]],[1597919409,null],[1597919410,null],[1597919411,null],[1597919412,null],[1597919413,null],[1597919414,null],[1597919415,[57,62,67,72,73,74,75,76,77,78]],[1597919416,[21,24,25,26,27,28,30,30,30,31]],[1597919417,[22,24,25,27,29,30,31,31,83,128]],[1597919418,[20,23,24,27,27,32,40,44,84,94]],[1597919419,[27,29,31,32,32,33,33,33,33,34]],[1597919420,null],[1597919421,null],[1597919422,null],[1597919423,null],[1597919424,null],[1597919425,null],[1597919426,[22,26,28,39,41,45,49,74,94,99]],[1597919427,[20,25,31,48,65,72,87,120,204,223]],[1597919428,[21,35,45,82,106,110,119,140,175,197]],[1597919429,[37,39,44,67,78,85,86,87,88,89]],[1597919430,null],[1597919431,null],[1597919432,null],[1597919433,null],[1597919434,null],[1597919435,null],[1597919436,[23,30,45,108,112,125,132,139,146,148]],[1597919437,[19,28,46,93,116,128,138,153,203,253]],[1597919438,[20,35,42,52,65,73,90,111,115,116]]]);
+
+var responseTimeChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container',
+    zoomType: 'x'
+  },
+  colors: ['#C4FD90', '#7FF77F', '#6FF2AD', '#60ECE5', '#51A8E7', '#4353E2', '#7335DC', '#BC28D7', '#D11C97', '#C73905', 'Orange'],
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    y: -65,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  navigator: { baseSeries: 9 },
+  rangeSelector: {
+    rangeSelector: { align: "left" },
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+        },
+        select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Response Time (ms)',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  plotOptions: {
+    arearange: { lineWidth: 1 },
+    series: {
+      dataGrouping: { enabled: false }
+    }
+  },
+  series: [
+  
+    
+         {
+pointInterval: 1000,
+name: 'min',
+data: responseTimePercentiles[0],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 10
+},
+         {
+pointInterval: 1000,
+name: '25%',
+data: responseTimePercentiles[1],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 9
+},
+         {
+pointInterval: 1000,
+name: '50%',
+data: responseTimePercentiles[2],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 8
+},
+         {
+pointInterval: 1000,
+name: '75%',
+data: responseTimePercentiles[3],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 7
+},
+         {
+pointInterval: 1000,
+name: '80%',
+data: responseTimePercentiles[4],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 6
+},
+         {
+pointInterval: 1000,
+name: '85%',
+data: responseTimePercentiles[5],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 5
+},
+         {
+pointInterval: 1000,
+name: '90%',
+data: responseTimePercentiles[6],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 4
+},
+         {
+pointInterval: 1000,
+name: '95%',
+data: responseTimePercentiles[7],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 3
+},
+         {
+pointInterval: 1000,
+name: '99%',
+data: responseTimePercentiles[8],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 2
+},
+         {
+pointInterval: 1000,
+name: 'max',
+data: responseTimePercentiles[9],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 1
+},
+  allUsersData
+  ]
+});
+
+responseTimeChart.setTitle({
+  text: '<span class="chart_title chart_title_">Response Time Percentiles over Time (OK)</span>',
+  useHTML: true
+});
+
+var container_requests = unpack([[1597918998,[1,0, 1]],[1597918999,[0,0, 0]],[1597919000,[0,0, 0]],[1597919001,[0,0, 0]],[1597919002,[0,0, 0]],[1597919003,[0,0, 0]],[1597919004,[0,0, 0]],[1597919005,[0,0, 0]],[1597919006,[0,0, 0]],[1597919007,[0,0, 0]],[1597919008,[30,0, 30]],[1597919009,[60,0, 60]],[1597919010,[60,1, 59]],[1597919011,[60,0, 60]],[1597919012,[61,0, 61]],[1597919013,[59,1, 58]],[1597919014,[60,1, 59]],[1597919015,[60,0, 60]],[1597919016,[60,0, 60]],[1597919017,[60,1, 59]],[1597919018,[76,0, 76]],[1597919019,[158,1, 157]],[1597919020,[219,1, 218]],[1597919021,[225,1, 224]],[1597919022,[187,3, 184]],[1597919023,[195,0, 195]],[1597919024,[214,0, 214]],[1597919025,[199,0, 199]],[1597919026,[197,2, 195]],[1597919027,[185,1, 184]],[1597919028,[165,1, 164]],[1597919029,[162,0, 162]],[1597919030,[158,0, 158]],[1597919031,[220,1, 219]],[1597919032,[209,1, 208]],[1597919033,[204,0, 204]],[1597919034,[217,0, 217]],[1597919035,[199,0, 199]],[1597919036,[259,3, 256]],[1597919037,[245,1, 244]],[1597919038,[202,2, 200]],[1597919039,[247,0, 247]],[1597919040,[212,1, 211]],[1597919041,[254,0, 254]],[1597919042,[264,1, 263]],[1597919043,[235,2, 233]],[1597919044,[249,1, 248]],[1597919045,[272,2, 270]],[1597919046,[289,2, 287]],[1597919047,[235,0, 235]],[1597919048,[174,1, 173]],[1597919049,[222,2, 220]],[1597919050,[187,1, 186]],[1597919051,[283,1, 282]],[1597919052,[203,1, 202]],[1597919053,[261,1, 260]],[1597919054,[250,2, 248]],[1597919055,[255,0, 255]],[1597919056,[302,1, 301]],[1597919057,[275,1, 274]],[1597919058,[229,1, 228]],[1597919059,[321,0, 321]],[1597919060,[291,1, 290]],[1597919061,[335,1, 334]],[1597919062,[224,2, 222]],[1597919063,[262,0, 262]],[1597919064,[358,0, 358]],[1597919065,[283,2, 281]],[1597919066,[316,2, 314]],[1597919067,[292,4, 288]],[1597919068,[229,1, 228]],[1597919069,[291,1, 290]],[1597919070,[260,2, 258]],[1597919071,[358,1, 357]],[1597919072,[283,1, 282]],[1597919073,[246,2, 244]],[1597919074,[325,2, 323]],[1597919075,[255,1, 254]],[1597919076,[280,0, 280]],[1597919077,[316,0, 316]],[1597919078,[292,3, 289]],[1597919079,[304,1, 303]],[1597919080,[308,0, 308]],[1597919081,[348,2, 346]],[1597919082,[269,0, 269]],[1597919083,[257,0, 257]],[1597919084,[348,1, 347]],[1597919085,[340,0, 340]],[1597919086,[282,1, 281]],[1597919087,[292,0, 292]],[1597919088,[318,1, 317]],[1597919089,[333,1, 332]],[1597919090,[323,0, 323]],[1597919091,[349,2, 347]],[1597919092,[303,0, 303]],[1597919093,[272,0, 272]],[1597919094,[285,1, 284]],[1597919095,[312,1, 311]],[1597919096,[301,0, 301]],[1597919097,[312,2, 310]],[1597919098,[363,1, 362]],[1597919099,[331,0, 331]],[1597919100,[368,1, 367]],[1597919101,[430,4, 426]],[1597919102,[392,7, 385]],[1597919103,[415,0, 415]],[1597919104,[457,3, 454]],[1597919105,[436,0, 436]],[1597919106,[454,4, 450]],[1597919107,[366,1, 365]],[1597919108,[349,1, 348]],[1597919109,[369,5, 364]],[1597919110,[371,1, 370]],[1597919111,[301,0, 301]],[1597919112,[262,0, 262]],[1597919113,[254,0, 254]],[1597919114,[262,0, 262]],[1597919115,[285,2, 283]],[1597919116,[294,0, 294]],[1597919117,[280,1, 279]],[1597919118,[290,3, 287]],[1597919119,[292,2, 290]],[1597919120,[370,0, 370]],[1597919121,[358,0, 358]],[1597919122,[310,0, 310]],[1597919123,[313,0, 313]],[1597919124,[324,1, 323]],[1597919125,[352,0, 352]],[1597919126,[385,1, 384]],[1597919127,[298,1, 297]],[1597919128,[278,1, 277]],[1597919129,[224,2, 222]],[1597919130,[356,1, 355]],[1597919131,[371,2, 369]],[1597919132,[266,0, 266]],[1597919133,[322,2, 320]],[1597919134,[327,2, 325]],[1597919135,[381,3, 378]],[1597919136,[418,0, 418]],[1597919137,[315,1, 314]],[1597919138,[244,2, 242]],[1597919139,[254,1, 253]],[1597919140,[322,3, 319]],[1597919141,[427,1, 426]],[1597919142,[287,2, 285]],[1597919143,[319,2, 317]],[1597919144,[304,0, 304]],[1597919145,[358,1, 357]],[1597919146,[479,0, 479]],[1597919147,[319,0, 319]],[1597919148,[295,0, 295]],[1597919149,[343,0, 343]],[1597919150,[316,2, 314]],[1597919151,[584,0, 584]],[1597919152,[401,0, 401]],[1597919153,[356,0, 356]],[1597919154,[348,2, 346]],[1597919155,[273,1, 272]],[1597919156,[606,1, 605]],[1597919157,[415,1, 414]],[1597919158,[313,0, 313]],[1597919159,[375,3, 372]],[1597919160,[380,0, 380]],[1597919161,[497,0, 497]],[1597919162,[429,1, 428]],[1597919163,[412,0, 412]],[1597919164,[373,2, 371]],[1597919165,[268,0, 268]],[1597919166,[447,2, 445]],[1597919167,[454,2, 452]],[1597919168,[368,2, 366]],[1597919169,[355,0, 355]],[1597919170,[417,0, 417]],[1597919171,[437,0, 437]],[1597919172,[393,2, 391]],[1597919173,[381,2, 379]],[1597919174,[360,2, 358]],[1597919175,[357,1, 356]],[1597919176,[405,1, 404]],[1597919177,[411,0, 411]],[1597919178,[334,1, 333]],[1597919179,[360,0, 360]],[1597919180,[366,0, 366]],[1597919181,[463,1, 462]],[1597919182,[366,1, 365]],[1597919183,[307,4, 303]],[1597919184,[417,3, 414]],[1597919185,[433,1, 432]],[1597919186,[363,1, 362]],[1597919187,[477,1, 476]],[1597919188,[387,1, 386]],[1597919189,[412,1, 411]],[1597919190,[368,1, 367]],[1597919191,[473,1, 472]],[1597919192,[394,0, 394]],[1597919193,[333,4, 329]],[1597919194,[378,1, 377]],[1597919195,[483,0, 483]],[1597919196,[387,0, 387]],[1597919197,[331,1, 330]],[1597919198,[339,3, 336]],[1597919199,[411,4, 407]],[1597919200,[351,4, 347]],[1597919201,[509,0, 509]],[1597919202,[472,2, 470]],[1597919203,[385,4, 381]],[1597919204,[383,3, 380]],[1597919205,[446,4, 442]],[1597919206,[412,5, 407]],[1597919207,[356,3, 353]],[1597919208,[417,0, 417]],[1597919209,[362,4, 358]],[1597919210,[371,2, 369]],[1597919211,[449,0, 449]],[1597919212,[568,2, 566]],[1597919213,[502,3, 499]],[1597919214,[454,2, 452]],[1597919215,[439,0, 439]],[1597919216,[453,0, 453]],[1597919217,[417,1, 416]],[1597919218,[382,3, 379]],[1597919219,[335,2, 333]],[1597919220,[376,1, 375]],[1597919221,[415,2, 413]],[1597919222,[466,3, 463]],[1597919223,[538,0, 538]],[1597919224,[502,3, 499]],[1597919225,[495,0, 495]],[1597919226,[423,1, 422]],[1597919227,[521,3, 518]],[1597919228,[385,2, 383]],[1597919229,[397,2, 395]],[1597919230,[359,0, 359]],[1597919231,[337,1, 336]],[1597919232,[494,0, 494]],[1597919233,[453,1, 452]],[1597919234,[490,3, 487]],[1597919235,[503,2, 501]],[1597919236,[473,0, 473]],[1597919237,[530,2, 528]],[1597919238,[453,2, 451]],[1597919239,[423,4, 419]],[1597919240,[405,1, 404]],[1597919241,[362,0, 362]],[1597919242,[498,4, 494]],[1597919243,[465,0, 465]],[1597919244,[460,1, 459]],[1597919245,[421,2, 419]],[1597919246,[418,0, 418]],[1597919247,[512,2, 510]],[1597919248,[384,0, 384]],[1597919249,[387,1, 386]],[1597919250,[415,1, 414]],[1597919251,[439,0, 439]],[1597919252,[431,2, 429]],[1597919253,[311,0, 311]],[1597919254,[378,0, 378]],[1597919255,[311,0, 311]],[1597919256,[341,0, 341]],[1597919257,[463,0, 463]],[1597919258,[518,0, 518]],[1597919259,[447,3, 444]],[1597919260,[454,0, 454]],[1597919261,[486,1, 485]],[1597919262,[374,1, 373]],[1597919263,[458,1, 457]],[1597919264,[477,0, 477]],[1597919265,[377,1, 376]],[1597919266,[326,0, 326]],[1597919267,[626,1, 625]],[1597919268,[616,3, 613]],[1597919269,[561,2, 559]],[1597919270,[540,0, 540]],[1597919271,[563,1, 562]],[1597919272,[573,4, 569]],[1597919273,[511,6, 505]],[1597919274,[538,7, 531]],[1597919275,[516,5, 511]],[1597919276,[402,2, 400]],[1597919277,[651,1, 650]],[1597919278,[568,1, 567]],[1597919279,[521,2, 519]],[1597919280,[452,1, 451]],[1597919281,[473,1, 472]],[1597919282,[454,0, 454]],[1597919283,[315,2, 313]],[1597919284,[464,1, 463]],[1597919285,[546,1, 545]],[1597919286,[409,0, 409]],[1597919287,[593,0, 593]],[1597919288,[559,4, 555]],[1597919289,[591,2, 589]],[1597919290,[525,3, 522]],[1597919291,[506,3, 503]],[1597919292,[516,0, 516]],[1597919293,[364,0, 364]],[1597919294,[480,0, 480]],[1597919295,[503,1, 502]],[1597919296,[473,1, 472]],[1597919297,[565,3, 562]],[1597919298,[604,1, 603]],[1597919299,[597,1, 596]],[1597919300,[467,2, 465]],[1597919301,[576,1, 575]],[1597919302,[490,1, 489]],[1597919303,[492,1, 491]],[1597919304,[535,0, 535]],[1597919305,[517,3, 514]],[1597919306,[504,1, 503]],[1597919307,[568,1, 567]],[1597919308,[537,0, 537]],[1597919309,[528,1, 527]],[1597919310,[434,0, 434]],[1597919311,[441,0, 441]],[1597919312,[386,0, 386]],[1597919313,[464,1, 463]],[1597919314,[504,1, 503]],[1597919315,[486,0, 486]],[1597919316,[527,0, 527]],[1597919317,[507,0, 507]],[1597919318,[522,0, 522]],[1597919319,[545,0, 545]],[1597919320,[434,0, 434]],[1597919321,[463,0, 463]],[1597919322,[321,0, 321]],[1597919323,[386,2, 384]],[1597919324,[398,1, 397]],[1597919325,[353,0, 353]],[1597919326,[496,0, 496]],[1597919327,[477,0, 477]],[1597919328,[449,0, 449]],[1597919329,[427,0, 427]],[1597919330,[340,1, 339]],[1597919331,[338,2, 336]],[1597919332,[307,0, 307]],[1597919333,[318,0, 318]],[1597919334,[377,2, 375]],[1597919335,[334,2, 332]],[1597919336,[438,0, 438]],[1597919337,[426,0, 426]],[1597919338,[260,0, 260]],[1597919339,[319,3, 316]],[1597919340,[379,0, 379]],[1597919341,[316,1, 315]],[1597919342,[274,4, 270]],[1597919343,[264,0, 264]],[1597919344,[392,8, 384]],[1597919345,[307,1, 306]],[1597919346,[206,0, 206]],[1597919347,[513,0, 513]],[1597919348,[359,0, 359]],[1597919349,[259,1, 258]],[1597919350,[284,1, 283]],[1597919351,[183,0, 183]],[1597919352,[262,0, 262]],[1597919353,[218,0, 218]],[1597919354,[272,1, 271]],[1597919355,[294,3, 291]],[1597919356,[236,0, 236]],[1597919357,[283,1, 282]],[1597919358,[194,0, 194]],[1597919359,[189,0, 189]],[1597919360,[138,0, 138]],[1597919361,[134,0, 134]],[1597919362,[113,1, 112]],[1597919363,[63,0, 63]],[1597919364,[173,0, 173]],[1597919365,[181,0, 181]],[1597919366,[192,0, 192]],[1597919367,[226,1, 225]],[1597919368,[196,0, 196]],[1597919369,[160,0, 160]],[1597919370,[114,0, 114]],[1597919371,[77,0, 77]],[1597919372,[77,1, 76]],[1597919373,[11,0, 11]],[1597919374,[60,0, 60]],[1597919375,[132,0, 132]],[1597919376,[67,0, 67]],[1597919377,[97,0, 97]],[1597919378,[86,0, 86]],[1597919379,[97,1, 96]],[1597919380,[82,0, 82]],[1597919381,[64,0, 64]],[1597919382,[44,1, 43]],[1597919383,[1,0, 1]],[1597919384,[13,0, 13]],[1597919385,[3,0, 3]],[1597919386,[33,0, 33]],[1597919387,[78,0, 78]],[1597919388,[38,0, 38]],[1597919389,[22,1, 21]],[1597919390,[35,0, 35]],[1597919391,[45,0, 45]],[1597919392,[31,0, 31]],[1597919393,[1,0, 1]],[1597919394,[8,0, 8]],[1597919395,[4,0, 4]],[1597919396,[16,0, 16]],[1597919397,[99,0, 99]],[1597919398,[41,0, 41]],[1597919399,[24,0, 24]],[1597919400,[78,0, 78]],[1597919401,[92,0, 92]],[1597919402,[55,0, 55]],[1597919403,[1,0, 1]],[1597919404,[18,0, 18]],[1597919405,[7,0, 7]],[1597919406,[15,0, 15]],[1597919407,[53,0, 53]],[1597919408,[25,0, 25]],[1597919409,[0,0, 0]],[1597919410,[0,0, 0]],[1597919411,[0,0, 0]],[1597919412,[0,0, 0]],[1597919413,[0,0, 0]],[1597919414,[0,0, 0]],[1597919415,[2,0, 2]],[1597919416,[10,0, 10]],[1597919417,[50,0, 50]],[1597919418,[20,0, 20]],[1597919419,[3,0, 3]],[1597919420,[0,0, 0]],[1597919421,[0,0, 0]],[1597919422,[0,0, 0]],[1597919423,[0,0, 0]],[1597919424,[0,0, 0]],[1597919425,[0,0, 0]],[1597919426,[11,0, 11]],[1597919427,[71,0, 71]],[1597919428,[48,0, 48]],[1597919429,[7,0, 7]],[1597919430,[0,0, 0]],[1597919431,[0,0, 0]],[1597919432,[0,0, 0]],[1597919433,[0,0, 0]],[1597919434,[0,0, 0]],[1597919435,[0,0, 0]],[1597919436,[15,0, 15]],[1597919437,[103,1, 102]],[1597919438,[23,0, 23]]]);
+
+var requestsChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container_requests',
+    zoomType: 'x'
+  },
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    itemDistance: 10,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  rangeSelector: {
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+         },
+         select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  plotOptions: {
+    series: {
+      dataGrouping: { enabled: false }
+    },
+    area: {
+      stacking: 'normal'
+    }
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Number of requests',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  series: [
+    {
+color: '#4572A7',
+name: 'All',
+data: container_requests[0],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+    allUsersData
+  ]
+});
+
+requestsChart.setTitle({
+  text: '<span class="chart_title">Number of requests per second</span>',
+  useHTML: true
+});
+
+var container_responses = unpack([[1597918998,[1,0, 1]],[1597918999,[0,0, 0]],[1597919000,[0,0, 0]],[1597919001,[0,0, 0]],[1597919002,[0,0, 0]],[1597919003,[0,0, 0]],[1597919004,[0,0, 0]],[1597919005,[0,0, 0]],[1597919006,[0,0, 0]],[1597919007,[0,0, 0]],[1597919008,[13,0, 13]],[1597919009,[42,0, 42]],[1597919010,[66,0, 66]],[1597919011,[57,0, 57]],[1597919012,[47,0, 47]],[1597919013,[59,0, 59]],[1597919014,[68,0, 68]],[1597919015,[61,0, 61]],[1597919016,[58,0, 58]],[1597919017,[58,0, 58]],[1597919018,[56,0, 56]],[1597919019,[108,0, 108]],[1597919020,[172,1, 171]],[1597919021,[253,0, 253]],[1597919022,[199,0, 199]],[1597919023,[201,2, 199]],[1597919024,[198,1, 197]],[1597919025,[194,0, 194]],[1597919026,[214,0, 214]],[1597919027,[199,1, 198]],[1597919028,[154,0, 154]],[1597919029,[178,1, 177]],[1597919030,[157,1, 156]],[1597919031,[172,1, 171]],[1597919032,[217,0, 217]],[1597919033,[188,1, 187]],[1597919034,[194,0, 194]],[1597919035,[225,0, 225]],[1597919036,[282,1, 281]],[1597919037,[241,3, 238]],[1597919038,[163,1, 162]],[1597919039,[219,0, 219]],[1597919040,[151,0, 151]],[1597919041,[301,1, 300]],[1597919042,[212,1, 211]],[1597919043,[304,0, 304]],[1597919044,[211,0, 211]],[1597919045,[289,0, 289]],[1597919046,[308,3, 305]],[1597919047,[241,1, 240]],[1597919048,[172,2, 170]],[1597919049,[275,1, 274]],[1597919050,[223,0, 223]],[1597919051,[242,0, 242]],[1597919052,[154,0, 154]],[1597919053,[231,1, 230]],[1597919054,[306,2, 304]],[1597919055,[264,2, 262]],[1597919056,[298,1, 297]],[1597919057,[298,1, 297]],[1597919058,[224,1, 223]],[1597919059,[281,2, 279]],[1597919060,[276,1, 275]],[1597919061,[373,1, 372]],[1597919062,[258,0, 258]],[1597919063,[224,1, 223]],[1597919064,[319,0, 319]],[1597919065,[238,0, 238]],[1597919066,[314,0, 314]],[1597919067,[300,1, 299]],[1597919068,[240,2, 238]],[1597919069,[262,1, 261]],[1597919070,[268,3, 265]],[1597919071,[370,2, 368]],[1597919072,[263,2, 261]],[1597919073,[264,0, 264]],[1597919074,[358,1, 357]],[1597919075,[299,1, 298]],[1597919076,[231,0, 231]],[1597919077,[264,0, 264]],[1597919078,[328,1, 327]],[1597919079,[342,3, 339]],[1597919080,[314,1, 313]],[1597919081,[360,1, 359]],[1597919082,[288,3, 285]],[1597919083,[282,1, 281]],[1597919084,[292,2, 290]],[1597919085,[330,1, 329]],[1597919086,[318,1, 317]],[1597919087,[303,0, 303]],[1597919088,[300,0, 300]],[1597919089,[312,2, 310]],[1597919090,[342,0, 342]],[1597919091,[350,2, 348]],[1597919092,[319,0, 319]],[1597919093,[304,0, 304]],[1597919094,[268,1, 267]],[1597919095,[304,1, 303]],[1597919096,[314,1, 313]],[1597919097,[280,0, 280]],[1597919098,[335,2, 333]],[1597919099,[293,1, 292]],[1597919100,[377,0, 377]],[1597919101,[440,2, 438]],[1597919102,[349,2, 347]],[1597919103,[421,8, 413]],[1597919104,[461,0, 461]],[1597919105,[462,4, 458]],[1597919106,[509,3, 506]],[1597919107,[364,0, 364]],[1597919108,[315,0, 315]],[1597919109,[327,0, 327]],[1597919110,[436,4, 432]],[1597919111,[339,1, 338]],[1597919112,[272,1, 271]],[1597919113,[263,0, 263]],[1597919114,[265,0, 265]],[1597919115,[263,0, 263]],[1597919116,[295,1, 294]],[1597919117,[270,1, 269]],[1597919118,[269,1, 268]],[1597919119,[285,3, 282]],[1597919120,[382,0, 382]],[1597919121,[360,0, 360]],[1597919122,[271,0, 271]],[1597919123,[284,0, 284]],[1597919124,[242,0, 242]],[1597919125,[391,2, 389]],[1597919126,[466,1, 465]],[1597919127,[328,2, 326]],[1597919128,[277,1, 276]],[1597919129,[188,1, 187]],[1597919130,[303,1, 302]],[1597919131,[412,0, 412]],[1597919132,[239,0, 239]],[1597919133,[301,0, 301]],[1597919134,[295,1, 294]],[1597919135,[355,0, 355]],[1597919136,[502,1, 501]],[1597919137,[300,1, 299]],[1597919138,[271,1, 270]],[1597919139,[297,4, 293]],[1597919140,[268,2, 266]],[1597919141,[444,3, 441]],[1597919142,[357,0, 357]],[1597919143,[326,1, 325]],[1597919144,[286,4, 282]],[1597919145,[210,3, 207]],[1597919146,[562,1, 561]],[1597919147,[398,0, 398]],[1597919148,[288,1, 287]],[1597919149,[322,0, 322]],[1597919150,[374,2, 372]],[1597919151,[564,3, 561]],[1597919152,[364,1, 363]],[1597919153,[357,0, 357]],[1597919154,[379,0, 379]],[1597919155,[270,0, 270]],[1597919156,[480,0, 480]],[1597919157,[451,1, 450]],[1597919158,[384,0, 384]],[1597919159,[358,1, 357]],[1597919160,[370,1, 369]],[1597919161,[446,1, 445]],[1597919162,[404,1, 403]],[1597919163,[437,1, 436]],[1597919164,[408,2, 406]],[1597919165,[332,1, 331]],[1597919166,[383,2, 381]],[1597919167,[423,1, 422]],[1597919168,[339,1, 338]],[1597919169,[354,1, 353]],[1597919170,[373,1, 372]],[1597919171,[483,0, 483]],[1597919172,[434,2, 432]],[1597919173,[375,1, 374]],[1597919174,[369,3, 366]],[1597919175,[427,1, 426]],[1597919176,[362,3, 359]],[1597919177,[416,1, 415]],[1597919178,[376,2, 374]],[1597919179,[360,1, 359]],[1597919180,[337,0, 337]],[1597919181,[457,0, 457]],[1597919182,[411,1, 410]],[1597919183,[307,0, 307]],[1597919184,[372,3, 369]],[1597919185,[449,0, 449]],[1597919186,[373,1, 372]],[1597919187,[404,1, 403]],[1597919188,[365,0, 365]],[1597919189,[425,0, 425]],[1597919190,[291,0, 291]],[1597919191,[508,1, 507]],[1597919192,[475,0, 475]],[1597919193,[388,5, 383]],[1597919194,[345,1, 344]],[1597919195,[443,1, 442]],[1597919196,[482,0, 482]],[1597919197,[332,1, 331]],[1597919198,[312,1, 311]],[1597919199,[343,1, 342]],[1597919200,[377,4, 373]],[1597919201,[396,2, 394]],[1597919202,[447,1, 446]],[1597919203,[441,0, 441]],[1597919204,[483,2, 481]],[1597919205,[434,0, 434]],[1597919206,[394,0, 394]],[1597919207,[369,3, 366]],[1597919208,[333,2, 331]],[1597919209,[339,3, 336]],[1597919210,[398,1, 397]],[1597919211,[499,0, 499]],[1597919212,[525,0, 525]],[1597919213,[513,3, 510]],[1597919214,[439,0, 439]],[1597919215,[446,5, 441]],[1597919216,[416,0, 416]],[1597919217,[506,2, 504]],[1597919218,[392,0, 392]],[1597919219,[371,2, 369]],[1597919220,[355,2, 353]],[1597919221,[325,0, 325]],[1597919222,[505,2, 503]],[1597919223,[495,3, 492]],[1597919224,[528,0, 528]],[1597919225,[520,2, 518]],[1597919226,[402,0, 402]],[1597919227,[518,2, 516]],[1597919228,[455,7, 448]],[1597919229,[398,2, 396]],[1597919230,[376,1, 375]],[1597919231,[291,2, 289]],[1597919232,[469,2, 467]],[1597919233,[440,0, 440]],[1597919234,[474,1, 473]],[1597919235,[466,1, 465]],[1597919236,[460,1, 459]],[1597919237,[500,1, 499]],[1597919238,[361,2, 359]],[1597919239,[387,2, 385]],[1597919240,[390,0, 390]],[1597919241,[403,1, 402]],[1597919242,[466,0, 466]],[1597919243,[354,1, 353]],[1597919244,[385,4, 381]],[1597919245,[314,1, 313]],[1597919246,[357,0, 357]],[1597919247,[545,3, 542]],[1597919248,[581,2, 579]],[1597919249,[463,4, 459]],[1597919250,[458,2, 456]],[1597919251,[520,0, 520]],[1597919252,[321,2, 319]],[1597919253,[420,1, 419]],[1597919254,[520,1, 519]],[1597919255,[300,1, 299]],[1597919256,[280,0, 280]],[1597919257,[574,0, 574]],[1597919258,[569,2, 567]],[1597919259,[461,3, 458]],[1597919260,[439,2, 437]],[1597919261,[457,0, 457]],[1597919262,[438,2, 436]],[1597919263,[431,1, 430]],[1597919264,[440,3, 437]],[1597919265,[461,1, 460]],[1597919266,[350,3, 347]],[1597919267,[558,1, 557]],[1597919268,[541,2, 539]],[1597919269,[559,2, 557]],[1597919270,[542,0, 542]],[1597919271,[553,2, 551]],[1597919272,[579,1, 578]],[1597919273,[359,3, 356]],[1597919274,[495,8, 487]],[1597919275,[575,4, 571]],[1597919276,[455,6, 449]],[1597919277,[677,1, 676]],[1597919278,[618,2, 616]],[1597919279,[608,3, 605]],[1597919280,[480,1, 479]],[1597919281,[434,0, 434]],[1597919282,[472,1, 471]],[1597919283,[362,0, 362]],[1597919284,[419,2, 417]],[1597919285,[488,1, 487]],[1597919286,[442,0, 442]],[1597919287,[553,0, 553]],[1597919288,[569,2, 567]],[1597919289,[545,4, 541]],[1597919290,[438,0, 438]],[1597919291,[579,3, 576]],[1597919292,[445,2, 443]],[1597919293,[493,1, 492]],[1597919294,[583,1, 582]],[1597919295,[465,2, 463]],[1597919296,[479,0, 479]],[1597919297,[541,1, 540]],[1597919298,[554,3, 551]],[1597919299,[600,5, 595]],[1597919300,[462,1, 461]],[1597919301,[564,1, 563]],[1597919302,[477,1, 476]],[1597919303,[492,1, 491]],[1597919304,[556,0, 556]],[1597919305,[504,2, 502]],[1597919306,[520,1, 519]],[1597919307,[560,1, 559]],[1597919308,[548,0, 548]],[1597919309,[566,0, 566]],[1597919310,[513,2, 511]],[1597919311,[479,0, 479]],[1597919312,[364,0, 364]],[1597919313,[460,1, 459]],[1597919314,[487,1, 486]],[1597919315,[448,3, 445]],[1597919316,[599,1, 598]],[1597919317,[522,1, 521]],[1597919318,[467,0, 467]],[1597919319,[500,1, 499]],[1597919320,[461,0, 461]],[1597919321,[471,0, 471]],[1597919322,[405,0, 405]],[1597919323,[335,0, 335]],[1597919324,[419,2, 417]],[1597919325,[360,1, 359]],[1597919326,[482,0, 482]],[1597919327,[461,0, 461]],[1597919328,[418,1, 417]],[1597919329,[408,0, 408]],[1597919330,[395,0, 395]],[1597919331,[338,2, 336]],[1597919332,[298,0, 298]],[1597919333,[304,0, 304]],[1597919334,[393,2, 391]],[1597919335,[324,1, 323]],[1597919336,[404,0, 404]],[1597919337,[523,0, 523]],[1597919338,[266,0, 266]],[1597919339,[295,2, 293]],[1597919340,[349,1, 348]],[1597919341,[262,0, 262]],[1597919342,[349,0, 349]],[1597919343,[246,4, 242]],[1597919344,[348,7, 341]],[1597919345,[400,2, 398]],[1597919346,[198,0, 198]],[1597919347,[452,0, 452]],[1597919348,[429,0, 429]],[1597919349,[251,1, 250]],[1597919350,[271,1, 270]],[1597919351,[209,0, 209]],[1597919352,[242,0, 242]],[1597919353,[214,0, 214]],[1597919354,[266,1, 265]],[1597919355,[302,1, 301]],[1597919356,[257,0, 257]],[1597919357,[270,1, 269]],[1597919358,[198,0, 198]],[1597919359,[192,0, 192]],[1597919360,[142,0, 142]],[1597919361,[146,0, 146]],[1597919362,[109,1, 108]],[1597919363,[64,0, 64]],[1597919364,[138,0, 138]],[1597919365,[210,0, 210]],[1597919366,[197,0, 197]],[1597919367,[206,1, 205]],[1597919368,[206,0, 206]],[1597919369,[151,0, 151]],[1597919370,[130,0, 130]],[1597919371,[85,0, 85]],[1597919372,[75,1, 74]],[1597919373,[10,0, 10]],[1597919374,[58,0, 58]],[1597919375,[130,0, 130]],[1597919376,[70,0, 70]],[1597919377,[95,0, 95]],[1597919378,[88,0, 88]],[1597919379,[88,1, 87]],[1597919380,[82,0, 82]],[1597919381,[72,0, 72]],[1597919382,[49,1, 48]],[1597919383,[2,0, 2]],[1597919384,[13,0, 13]],[1597919385,[3,0, 3]],[1597919386,[32,0, 32]],[1597919387,[75,0, 75]],[1597919388,[41,0, 41]],[1597919389,[24,1, 23]],[1597919390,[31,0, 31]],[1597919391,[49,1, 48]],[1597919392,[31,0, 31]],[1597919393,[2,0, 2]],[1597919394,[9,1, 8]],[1597919395,[4,1, 3]],[1597919396,[16,0, 16]],[1597919397,[95,0, 95]],[1597919398,[45,0, 45]],[1597919399,[24,0, 24]],[1597919400,[71,0, 71]],[1597919401,[91,0, 91]],[1597919402,[63,1, 62]],[1597919403,[3,0, 3]],[1597919404,[16,0, 16]],[1597919405,[8,0, 8]],[1597919406,[16,0, 16]],[1597919407,[49,0, 49]],[1597919408,[26,0, 26]],[1597919409,[3,0, 3]],[1597919410,[0,0, 0]],[1597919411,[0,0, 0]],[1597919412,[0,0, 0]],[1597919413,[0,0, 0]],[1597919414,[0,0, 0]],[1597919415,[4,2, 2]],[1597919416,[9,0, 9]],[1597919417,[50,0, 50]],[1597919418,[21,0, 21]],[1597919419,[3,0, 3]],[1597919420,[0,0, 0]],[1597919421,[0,0, 0]],[1597919422,[0,0, 0]],[1597919423,[0,0, 0]],[1597919424,[0,0, 0]],[1597919425,[0,0, 0]],[1597919426,[9,0, 9]],[1597919427,[66,0, 66]],[1597919428,[55,0, 55]],[1597919429,[7,0, 7]],[1597919430,[0,0, 0]],[1597919431,[0,0, 0]],[1597919432,[0,0, 0]],[1597919433,[0,0, 0]],[1597919434,[0,0, 0]],[1597919435,[0,0, 0]],[1597919436,[12,0, 12]],[1597919437,[99,1, 98]],[1597919438,[30,0, 30]]]);
+
+var requestsChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container_responses',
+    zoomType: 'x'
+  },
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    itemDistance: 10,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  rangeSelector: {
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+         },
+         select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  plotOptions: {
+    series: {
+      dataGrouping: { enabled: false }
+    },
+    area: {
+      stacking: 'normal'
+    }
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Number of responses',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  series: [
+    {
+color: '#4572A7',
+name: 'All',
+data: container_responses[0],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+},
+{
+color: '#FF0000',
+name: 'KO',
+data: container_responses[1],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+{
+color: '#A0B228',
+name: 'OK',
+data: container_responses[2],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+    allUsersData,
+{
+  
+type: 'pie',
+name: 'Distribution',
+data: [
+  {name: 'OK', y: 131222.0, color: '#A0B228'},{name: 'KO', y: 415.0, color: '#FF0000'}
+],
+center: [775, -40],
+size: 70,
+showInLegend: false,
+dataLabels: { enabled: false },
+dataGrouping: { enabled: false }
+
+}
+
+  ]
+});
+
+requestsChart.setTitle({
+  text: '<span class="chart_title">Number of responses per second</span>',
+  useHTML: true
+});
+
+    });
+</script>
+</body>
+</html>

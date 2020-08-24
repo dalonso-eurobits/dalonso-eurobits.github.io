@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="style/favicon.ico"/>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/gatling.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/all_sessions.js"></script>
+<script type="text/javascript" src="js/stats.js"></script>
+<script type="text/javascript" src="js/highstock.js"></script>
+<script type="text/javascript" src="js/highcharts-more.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/unpack.js"></script>
+<title>Gatling Stats - aggregationResult</title>
+</head>
+<body>
+<div class="frise"></div>
+<div class="container details">
+    <div class="head">
+        <a class="logo" href="https://gatling.io" target="blank_" title="Gatling Home Page"><img alt="Gatling" src="style/logo.png"/></a>
+        <div><a href="https://gatling.io/gatling-frontline/?report" target="_blank">Get more features with Gatling FrontLine</a></div>
+    </div>
+    <div class="main">
+        <div class="cadre">
+                <div class="onglet">
+                    <img src="style/cible.png" />
+                    <p><span>aggrestsimulation</span></p>
+                </div>
+                <div class="content">
+                    <div class="sous-menu">
+                        <div class="item "><a href="index.html">GLOBAL</a></div>
+                        <div class="item ouvert"><a id="details_link" href="#">DETAILS</a></div>
+                        <script type="text/javascript">
+                          var timestamp = 1597138323490;
+                          var runStartHumanDate = moment(timestamp).format("YYYY-MM-DD HH:mm:ss Z");
+                          document.writeln("<p class='sim_desc' title='"+ runStartHumanDate +", duration : 315 seconds' data-content=''>");
+                          document.writeln("<b>" + runStartHumanDate + ", duration : 315 seconds </b>");
+                          document.writeln("</p>");
+                        </script>
+                    </div>
+                    <div class="content-in">
+                        <h1><span>> </span>aggregationResult</h1>
+                        <div class="article">
+                            
+                        <div class="infos">
+                            <div class="infos-in">
+	                        <div class="infos-title">STATISTICS</div>
+                                <div class="repli"></div>                               
+                                <div class="info">
+                                    <h2 class="first">Executions</h2>
+                                    <table>
+                                        <thead>
+                                            <tr><th></th><th>Total</th><th>OK</th><th>KO</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title"></td>
+                                                <td id="numberOfRequests" class="total"></td>
+                                                <td id="numberOfRequestsOK" class="ok"></td>
+                                                <td id="numberOfRequestsKO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Mean req/s</td>
+                                                <td id="meanNumberOfRequestsPerSecond" class="total"></td>
+                                                <td id="meanNumberOfRequestsPerSecondOK" class="ok"></td>
+                                                <td id="meanNumberOfRequestsPerSecondKO" class="ko"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h2 class="second">Response Time (ms)</h2>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Total</th>
+                                                <th>OK</th>
+                                                <th>KO</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="title">Min</td>
+                                                <td id="minResponseTime" class="total"></td>
+                                                <td id="minResponseTimeOK" class="ok"></td>
+                                                <td id="minResponseTimeKO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">50th percentile</td>
+                                                <td id="percentiles1" class="total"></td>
+                                                <td id="percentiles1OK" class="ok"></td>
+                                                <td id="percentiles1KO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">75th percentile</td>
+                                                <td id="percentiles2" class="total"></td>
+                                                <td id="percentiles2OK" class="ok"></td>
+                                                <td id="percentiles2KO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">95th percentile</td>
+                                                <td id="percentiles3" class="total"></td>
+                                                <td id="percentiles3OK" class="ok"></td>
+                                                <td id="percentiles3KO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">99th percentile</td>
+                                                <td id="percentiles4" class="total"></td>
+                                                <td id="percentiles4OK" class="ok"></td>
+                                                <td id="percentiles4KO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Max</td>
+                                                <td id="maxResponseTime" class="total"></td>
+                                                <td id="maxResponseTimeOK" class="ok"></td>
+                                                <td id="maxResponseTimeKO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Mean</td>
+                                                <td id="meanResponseTime" class="total"></td>
+                                                <td id="meanResponseTimeOK" class="ok"></td>
+                                                <td id="meanResponseTimeKO" class="ko"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="title">Std Deviation</td>
+                                                <td id="standardDeviation" class="total"></td>
+                                                <td id="standardDeviationOK" class="ok"></td>
+                                                <td id="standardDeviationKO" class="ko"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+            <div class="schema demi">
+              <div id="container_indicators" class="demi"></div>
+            </div>
+<div class="statistics extensible-geant collapsed">
+    <div class="title">
+        <div class="title_collapsed" style="cursor: auto;">ERRORS</div>
+    </div>
+    <table id="container_errors" class="statistics-in extensible-geant">
+        <thead>
+            <tr>
+                <th id="error-col-1" class="header sortable"><span>Error</span></th>
+                <th id="error-col-2" class="header sortable"><span>Count</span></th>
+                <th id="error-col-3" class="header sortable"><span>Percentage</span></th>
+            </tr>
+        </thead>
+		<tbody>
+		    
+		    <tr>
+		    	<td class="error-col-1 total">i.g.h.c.i.RequestTimeoutException: Request timeout to swarm-uat.eurobits.local/192.168.81.34:8880 after 60000 ms<span class="value" style="display:none">0</span></td>
+		    	<td class="value error-col-2 total">488</td>
+		    	<td class="value error-col-3 total">85.614 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">i.n.c.ConnectTimeoutException: connection timed out: swarm-uat.eurobits.local/192.168.81.34:8880<span class="value" style="display:none">1</span></td>
+		    	<td class="value error-col-2 total">16</td>
+		    	<td class="value error-col-3 total">2.807 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">i.n.h.c.TooLongFrameException: An HTTP line is larger than 4096 bytes.<span class="value" style="display:none">2</span></td>
+		    	<td class="value error-col-2 total">7</td>
+		    	<td class="value error-col-3 total">1.228 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa7  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 15423]<span class="value" style="display:none">3</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 1)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 200645]<span class="value" style="display:none">4</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 11)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 227103]<span class="value" style="display:none">5</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa7  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 7864]<span class="value" style="display:none">6</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 0)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 328939]<span class="value" style="display:none">7</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xac  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 68346]<span class="value" style="display:none">8</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unrecognized token 'WzB': was expecting ('true', 'false' or 'null')  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 91026]<span class="value" style="display:none">9</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character (''' (code 39)): was expecting comma to separate Object entries  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 158989]<span class="value" style="display:none">10</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x52  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 155284]<span class="value" style="display:none">11</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa4  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 14164]<span class="value" style="display:none">12</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0xca  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 190565]<span class="value" style="display:none">13</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 158)): was expecting a colon to separate field name and value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 453967]<span class="value" style="display:none">14</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Invalid char: expected ] or , offset: 120945 near: &quot;...�K��l[?1}` n��\|���...&quot;<span class="value" style="display:none">15</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x9c  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 55743]<span class="value" style="display:none">16</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Atilde;&Aring;&Iuml;&Uacute;&Eacute;P&middot;&Oslash;F]J&Uuml;=&macr;2GW6&lt;&Agrave;-&cedil;&reg;&times;&Ocirc;&divide;&Agrave;&Ograve;&sup2;&Ecirc;F&Ntilde;&quot;K&brvbar;&Aring;GC@3<span class="value" style="display:none">17</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unrecognized token '&Agrave;N': was expecting ('true', 'false' or 'null')  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 274986]<span class="value" style="display:none">18</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa9  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 206943]<span class="value" style="display:none">19</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.i.IOException: Premature close<span class="value" style="display:none">20</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 11)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 133253]<span class="value" style="display:none">21</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x54  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 163513]<span class="value" style="display:none">22</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xfe  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 168532]<span class="value" style="display:none">23</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Trailing chars offset: 126545 near: &quot;...(q7����,}���&quot;\t6...&quot;<span class="value" style="display:none">24</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 7)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 263366]<span class="value" style="display:none">25</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 26)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 68344]<span class="value" style="display:none">26</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('w' (code 119)): was expecting double-quote to start field name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 384365]<span class="value" style="display:none">27</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 31)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 250441]<span class="value" style="display:none">28</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Invalid char: expected ] or , offset: 67689 near: &quot;...���)�&lt;�}���J�3]F�...&quot;<span class="value" style="display:none">29</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 19)): has to be escaped using backslash to be included in string value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 70864]<span class="value" style="display:none">30</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.l.ArrayIndexOutOfBoundsException: 162268<span class="value" style="display:none">31</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Trailing chars offset: 76347 near: &quot;...6%��Q �}�2��V��Z�...&quot;<span class="value" style="display:none">32</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xbc  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 7866]<span class="value" style="display:none">33</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x97  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 81593]<span class="value" style="display:none">34</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x87  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 43144]<span class="value" style="display:none">35</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 middle byte 0x15  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 618966]<span class="value" style="display:none">36</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 5)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 137653]<span class="value" style="display:none">37</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x92  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 77164]<span class="value" style="display:none">38</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8c  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 7864]<span class="value" style="display:none">39</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('-' (code 45)): was expecting double-quote to start field name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 180483]<span class="value" style="display:none">40</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 11)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 276244]<span class="value" style="display:none">41</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 8)): has to be escaped using backslash to be included in string value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 434431]<span class="value" style="display:none">42</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&ecirc;' (code 234)): was expecting comma to separate Object entries  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 163511]<span class="value" style="display:none">43</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('V' (code 86)): was expecting a colon to separate field name and value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 155319]<span class="value" style="display:none">44</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 17)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 83468]<span class="value" style="display:none">45</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Trailing chars offset: 46880 near: &quot;...cy&quot;:&quot;EUR&quot;},&quot;quantity...&quot;<span class="value" style="display:none">46</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 60788]<span class="value" style="display:none">47</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 4)): has to be escaped using backslash to be included in string value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 7865]<span class="value" style="display:none">48</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Trailing chars offset: 121527 near: &quot;...nts&quot;:&quot;&quot;}]}],&quot;credits...&quot;<span class="value" style="display:none">49</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.l.ArrayIndexOutOfBoundsException: 96081<span class="value" style="display:none">50</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 7)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 81596]<span class="value" style="display:none">51</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ((CTRL-CHAR, code 147)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 58263]<span class="value" style="display:none">52</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character (',' (code 44)): expected a value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 65823]<span class="value" style="display:none">53</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Invalid char: expected ] or , offset: 24838 near: &quot;...��/ �sV&amp;�}t�m����|� ...&quot;<span class="value" style="display:none">54</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">j.l.IllegalArgumentException: invalid version format: &Iuml;=&Mu;&reg;2&frac34;A[=I\&Oacute;&divide;&Ccedil;<span class="value" style="display:none">55</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jodd failed to parse into a valid AST: j.j.JsonException: Syntax error! Trailing chars offset: 107482 near: &quot;...:&quot;EUR&quot;}}]}],&quot;portfol...&quot;<span class="value" style="display:none">56</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0xa7  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 465007]<span class="value" style="display:none">57</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Illegal unquoted character ((CTRL-CHAR, code 31)): has to be escaped using backslash to be included in name  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 117492]<span class="value" style="display:none">58</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&frac12;' (code 189)): was expecting a colon to separate field name and value  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 312783]<span class="value" style="display:none">59</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Unexpected character ('&shy;' (code 173)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 150891]<span class="value" style="display:none">60</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		    <tr>
+		    	<td class="error-col-1 total">jsonPath($.aggregationInfo.code).find.exists preparation crashed: Jackson failed to parse into a valid AST: c.f.j.c.JsonParseException: Invalid UTF-8 start byte 0x8b  at [Source: (io.gatling.commons.util.CompositeByteArrayInputStream); line: 1, column: 367261]<span class="value" style="display:none">61</span></td>
+		    	<td class="value error-col-2 total">1</td>
+		    	<td class="value error-col-3 total">0.175 %</td>
+		    </tr>
+		</tbody>
+    </table>
+</div>
+
+            <div class="schema geant">
+              <div id="container_distrib" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <div id="container" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <a name="requests"></a>
+                <div id="container_requests" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <a name="responses"></a>
+                <div id="container_responses" class="geant"></div>
+            </div>
+
+            <div class="schema geant">
+              <div id="container_response_time_dispersion" class="geant"></div>
+            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul></ul>
+    </div>
+</div>
+<div class="foot">
+    <a href="https://gatling.io" title="Gatling Home Page"><img alt="Gatling" src="style/logo-gatling.jpg"/></a>
+</div>
+<script type="text/javascript">
+    var pageStats = stats.contents['req_aggregationresu-ee094'].stats;
+    $(document).ready(function() {
+        $('.sim_desc').popover({trigger:'hover', placement:'bottom'});
+        setDetailsLinkUrl();
+        setDetailsMenu();
+        setActiveMenu();
+        fillStats(pageStats);
+        
+Highcharts.setOptions({
+  global: { useUTC: false }
+});
+
+var indicatorsChart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'container_indicators',
+    marginRight: 150
+  },
+  credits: { enabled: false },
+  legend: { enabled: false },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  xAxis: {
+    categories: [
+      pageStats.group1.name,
+      pageStats.group2.name,
+      pageStats.group3.name,
+      pageStats.group4.name
+    ]
+  },
+  yAxis: {
+    title: { text: 'Number of Requests' }
+  },
+  tooltip: {
+    formatter: function() {
+      var s;
+      if (this.point.name) { // the pie chart
+        s = ''+ this.point.name +': '+ this.y +'% requests';
+      } else {
+        s = ''+ this.y + ' requests';
+      }
+      return s;
+    }
+  },
+  plotOptions: {
+    series: {
+      stacking: 'normal',
+      shadow: true
+    }
+  },
+  series: [
+    {
+      type: 'column',
+      data: [{
+      	color: '#A0B228',
+      	y: pageStats.group1.count
+      },
+      {
+      	color: '#FFDD00',
+      	y: pageStats.group2.count
+      },
+      {
+      	color: '#FF9D00',
+      	y: pageStats.group3.count
+      },
+      {
+      	color: '#FF0000',
+      	y: pageStats.group4.count
+      }]
+    },
+    {
+      type: 'pie',
+      name: 'Percentages',
+      data: [
+        {
+          name: pageStats.group1.name,
+          y: pageStats.group1.percentage,
+          color: '#A0B228'
+        },
+        {
+          name: pageStats.group2.name,
+          y: pageStats.group2.percentage,
+          color: '#FFDD00'
+        },
+        {
+          name: pageStats.group3.name,
+          y: pageStats.group3.percentage,
+          color: '#FF9D00'
+        },
+        {
+          name: pageStats.group4.name,
+          y: pageStats.group4.percentage,
+          color: '#FF0000'
+        }
+      ],
+      center: [470, 85],
+      size: 100,
+      showInLegend: false,
+      dataLabels: { enabled: false }
+    }
+  ]
+});
+
+indicatorsChart.setTitle({
+  text: '<span class="chart_title">Indicators</span>',
+  useHTML: true
+});
+
+	    $('#container_errors').sortable('#container_errors');
+    
+var responseTimeDistributionChart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'container_distrib',
+    type: 'column'
+  },
+  credits: {
+    enabled: false
+  },
+  legend: {
+    enabled: true,
+    floating: true,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: {
+      fontWeight: "normal"
+    }
+  },
+  title: {
+    text: 'A title to let highcharts reserve the place for the title set later'
+  },
+  xAxis: {
+    categories: ['2767', '4224', '5680', '7137', '8593', '10050', '11506', '12963', '14419', '15876', '17332', '18789', '20245', '21701', '23158', '24614', '26071', '27527', '28984', '30440', '31897', '33353', '34810', '36266', '37723', '39179', '40636', '42092', '43549', '45005', '46462', '47918', '49375', '50831', '52288', '53744', '55201', '56657', '58113', '59570', '61026', '62483', '63939', '65396', '66852', '68309', '69765', '71222', '72678', '74135', '75591', '77048', '78504', '79961', '81417', '82874', '84330', '85787', '87243', '88700', '90156', '91613', '93069', '94525', '95982', '97438', '98895', '100351', '101808', '103264', '104721', '106177', '107634', '109090', '110547', '112003', '113460', '114916', '116373', '117829', '119286', '120742', '122199', '123655', '125112', '126568', '128025', '129481', '130937', '132394', '133850', '135307', '136763', '138220', '139676', '141133', '142589', '144046', '145502', '146959'],
+    tickInterval: 20
+  },
+  yAxis: {
+    min: 0,
+    title: {
+      text: 'Percentage of Requests'
+    }
+  },
+  tooltip: {
+    formatter: function() {
+      return '<b>'+ this.x +' ms</b><br/>'+
+      this.series.name +': '+ this.y +' %<br/>'+
+      'Total: '+ this.point.stackTotal + ' %';
+    }
+  },
+  plotOptions: {
+    series: {
+      groupPadding: 0,
+      stacking: 'normal',
+      shadow: true
+    }
+  },
+  series: [
+  	{
+type: 'column',
+color: '#4572A7',
+name: 'OK',
+data: [
+  0.52,0.39,0.84,0.52,0.52,0.84,1.04,0.65,0.52,0.97,1.23,1.76,1.1,1.69,1.04,0.78,0.91,1.43,1.95,2.02,1.76,1.76,1.62,1.76,2.86,2.08,1.3,1.17,1.49,1.36,2.54,1.3,2.08,0.78,1.43,0.78,0.97,0.97,0.91,0.52,0.84,0.91,0.52,0.97,0.71,0.91,1.1,0.71,0.97,0.58,0.45,0.39,0.32,0.39,0.26,0.06,0.26,0.26,0.06,0.13,0.45,0.06,0.39,0.19,0.13,0.19,0.06,0.0,0.0,0.0,0.06,0.0,0.0,0.0,0.06,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+],
+tooltip: { yDecimals: 0, ySuffix: 'ms' }
+},
+  	{
+type: 'column',
+color: '#FF0000',
+name: 'KO',
+data: [
+  0.0,0.19,0.0,0.06,0.0,0.19,0.13,0.06,0.0,0.0,0.06,0.13,0.26,0.26,0.06,0.06,0.0,0.0,0.06,0.06,0.06,0.06,0.19,0.13,0.13,0.13,0.13,0.06,0.13,0.13,0.13,0.19,0.06,0.06,0.0,0.06,0.06,0.06,0.06,0.13,0.91,0.97,1.1,1.1,2.47,3.06,1.95,1.04,1.36,1.17,1.36,1.56,1.23,0.78,1.17,1.62,1.17,1.04,0.97,0.78,0.78,0.91,0.84,0.71,0.45,0.39,0.06,0.26,0.06,0.13,0.13,0.06,0.52,0.13,0.0,0.13,0.06,0.0,0.06,0.0,0.06,0.06,0.13,0.19,0.0,0.0,0.13,0.06,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.06,0.0,0.0,0.13
+],
+tooltip: { yDecimals: 0, ySuffix: 'ms' }
+}
+  ]
+});
+
+responseTimeDistributionChart.setTitle({
+  text: '<span class="chart_title">Response Time Distribution</span>',
+  useHTML: true
+});
+
+var responseTimePercentiles = unpack([[1597138325,null],[1597138326,null],[1597138327,null],[1597138328,null],[1597138329,null],[1597138330,null],[1597138331,null],[1597138332,null],[1597138333,null],[1597138334,null],[1597138335,null],[1597138336,null],[1597138337,null],[1597138338,null],[1597138339,null],[1597138340,null],[1597138341,null],[1597138342,null],[1597138343,null],[1597138344,null],[1597138345,null],[1597138346,null],[1597138347,null],[1597138348,null],[1597138349,null],[1597138350,null],[1597138351,null],[1597138352,null],[1597138353,null],[1597138354,[5579,18214,23152,39227,45571,52574,54331,55196,55870,56039]],[1597138355,[2039,10229,16255,28300,30072,36504,40881,50537,53374,54242]],[1597138356,[3114,4098,7409,9072,16763,24454,37101,54705,68788,72309]],[1597138357,[2061,7555,16585,30698,33300,34502,40532,52043,65529,76932]],[1597138358,[5501,10402,18039,32861,34611,36361,41420,49789,56484,58158]],[1597138359,null],[1597138360,null],[1597138361,null],[1597138362,null],[1597138363,null],[1597138364,null],[1597138365,null],[1597138366,null],[1597138367,null],[1597138368,null],[1597138369,null],[1597138370,null],[1597138371,null],[1597138372,null],[1597138373,null],[1597138374,null],[1597138375,null],[1597138376,null],[1597138377,[22996,27028,31060,35092,35898,36704,37511,38317,38962,39124]],[1597138378,null],[1597138379,[21894,22269,23135,32677,35297,37918,39624,41178,42421,42732]],[1597138380,null],[1597138381,[22247,32792,37359,46346,46865,53666,64056,66672,67382,67560]],[1597138382,[29882,33763,45308,48325,48708,49192,49677,50162,50550,50647]],[1597138383,[36764,46342,50423,57414,61076,64738,68399,72061,74990,75723]],[1597138384,[28817,37632,47150,52174,57079,61984,66889,71794,75718,76699]],[1597138385,[47630,48960,50291,51622,51888,52154,52420,52686,52899,52953]],[1597138386,[17984,17984,17984,17984,17984,17984,17984,17984,17984,17984]],[1597138387,[16965,26283,47186,61810,62033,62202,62263,67527,73819,75393]],[1597138388,[17426,18294,31935,59662,65233,66767,67997,69202,70371,70664]],[1597138389,[29506,30253,39974,48776,55371,61966,68561,75156,80432,81752]],[1597138390,[16664,20805,32930,52402,57321,60040,62760,65480,67656,68200]],[1597138391,[28619,30886,32542,36594,38485,40375,42266,44157,45669,46048]],[1597138392,[16166,24915,31686,45470,46122,47642,50894,54146,56748,57399]],[1597138393,[17606,24996,32386,39776,41254,42732,44210,45688,46870,47166]],[1597138394,[17391,21995,40166,47824,48052,52775,58744,61699,72122,74728]],[1597138395,[19466,20390,46677,47782,50689,60843,62798,63607,64488,64709]],[1597138396,[11181,26207,47338,53505,62833,66389,66648,67302,67897,68046]],[1597138397,[28651,29709,30768,39252,40948,42645,44342,46039,47396,47736]],[1597138398,[27142,31010,32993,33852,33952,34051,34151,34250,34330,34350]],[1597138399,[12610,32889,34808,39539,39675,39811,39947,40083,40192,40220]],[1597138400,null],[1597138401,null],[1597138402,[50352,52500,54648,56796,57225,57655,58084,58514,58858,58944]],[1597138403,[56095,60205,64315,66058,66406,66755,67103,67452,67731,67801]],[1597138404,null],[1597138405,[32627,32627,32627,32627,32627,32627,32627,32627,32627,32627]],[1597138406,[27896,46523,47483,59110,62832,63682,64532,65382,66062,66233]],[1597138407,[15006,31366,51429,66623,66974,67324,67675,68026,68306,68377]],[1597138408,[29642,29780,31325,34231,35075,35919,36764,37608,38284,38453]],[1597138409,[8944,15852,22761,29669,31051,32432,33814,35196,36301,36578]],[1597138410,null],[1597138411,null],[1597138412,[7165,14502,21839,29176,30643,32110,33578,35045,36219,36513]],[1597138413,[8109,9913,13417,31332,36254,48119,59985,71851,81343,83717]],[1597138414,[11634,18860,25476,43020,43442,44143,44845,47413,49468,49982]],[1597138415,[13521,17284,25696,40809,45815,47490,49165,50840,52180,52515]],[1597138416,[46489,46489,46489,46489,46489,46489,46489,46489,46489,46489]],[1597138417,null],[1597138418,[30450,47854,65258,65850,65968,66086,66205,66323,66418,66442]],[1597138419,[41641,43198,44756,46313,46625,46936,47248,47559,47808,47871]],[1597138420,null],[1597138421,[66709,66709,66709,66709,66709,66709,66709,66709,66709,66709]],[1597138422,[37052,37204,37356,39031,39366,39701,40036,40371,40639,40706]],[1597138423,[40935,43697,46459,49221,49774,50326,50879,51431,51873,51984]],[1597138424,null],[1597138425,null],[1597138426,[45578,50420,55262,60104,61072,62040,63009,63977,64752,64946]],[1597138427,null],[1597138428,null],[1597138429,[34451,34451,34451,34451,34451,34451,34451,34451,34451,34451]],[1597138430,[63286,63286,63286,63286,63286,63286,63286,63286,63286,63286]],[1597138431,null],[1597138432,null],[1597138433,[34312,45509,56707,56933,56978,57024,57069,57114,57150,57160]],[1597138434,null],[1597138435,[34398,36824,37717,37937,38019,38100,38182,38263,38328,38345]],[1597138436,[30493,35167,37442,42298,44782,47266,49750,52234,54221,54718]],[1597138437,[30313,32062,33812,35561,35911,36261,36611,36961,37241,37311]],[1597138438,[26507,32179,37326,52361,57447,59405,61398,63509,65197,65620]],[1597138439,[9530,22762,37360,47673,52400,55523,58397,60396,61995,62395]],[1597138440,[9939,14893,40334,63565,64804,65994,67049,67627,68090,68206]],[1597138441,[11539,13193,17919,29706,31281,34711,40526,54685,66012,68844]],[1597138442,[13412,22532,32230,46133,50289,52225,52730,58720,67272,69411]],[1597138443,[22225,29555,39002,51560,52159,55321,67296,67945,69666,70097]],[1597138444,[22325,34395,39351,54252,54427,54619,55286,56291,57259,57501]],[1597138445,[22042,31954,40614,57085,58467,68907,72741,73770,75388,75793]],[1597138446,[30046,38467,39920,42712,44056,47634,48871,76667,78371,78798]],[1597138447,[31661,37282,42903,46472,47186,47900,48614,49328,49899,50042]],[1597138448,[33658,33658,33658,33658,33658,33658,33658,33658,33658,33658]],[1597138449,[46291,47374,48457,55492,56899,58306,59713,61120,62245,62527]],[1597138450,[28266,28266,28266,28266,28266,28266,28266,28266,28266,28266]],[1597138451,null],[1597138452,[29258,37405,45553,53700,55330,56959,58589,60218,61522,61848]],[1597138453,[29256,29256,29256,29256,29256,29256,29256,29256,29256,29256]],[1597138454,[45709,45709,45709,45709,45709,45709,45709,45709,45709,45709]],[1597138455,[21113,27271,33429,39587,40818,42050,43281,44513,45498,45745]],[1597138456,[31068,33094,35121,37148,37553,37958,38364,38769,39093,39175]],[1597138457,null],[1597138458,[30281,41400,52519,63638,65861,68085,70309,72533,74312,74757]],[1597138459,[44222,44222,44222,44222,44222,44222,44222,44222,44222,44222]],[1597138460,null],[1597138461,[25175,25303,35755,43781,49579,55377,61176,66974,71613,72773]],[1597138462,[24136,35897,42248,47699,52718,57737,62687,67626,71577,72565]],[1597138463,null],[1597138464,[60720,65142,69564,73986,74870,75754,76639,77523,78231,78408]],[1597138465,null],[1597138466,null],[1597138467,[32342,41743,51145,60547,62427,64307,66188,68068,69572,69949]],[1597138468,[70911,70911,70911,70911,70911,70911,70911,70911,70911,70911]],[1597138469,[31913,41312,50712,60111,61991,63871,65751,67631,69135,69511]],[1597138470,[70252,70252,70252,70252,70252,70252,70252,70252,70252,70252]],[1597138471,[31462,42928,56037,69119,69323,70612,71901,73190,74221,74479]],[1597138472,[16546,31779,33219,55380,63543,69469,70921,72373,73534,73825]],[1597138473,[31729,33436,43996,47118,48204,49290,51596,55120,57940,58645]],[1597138474,[36219,36339,40791,44981,45389,45797,46205,46613,46940,47022]],[1597138475,[31095,36340,42082,51816,53148,66136,79124,92112,102502,105100]],[1597138476,[32881,39326,39505,45672,48667,51662,54658,57653,60049,60649]],[1597138477,[16032,31402,36100,40639,41342,51081,60820,66246,70587,71673]],[1597138478,[21770,37824,44686,49318,54162,59006,63567,67845,71267,72123]],[1597138479,[34298,48072,51368,55835,56737,58070,59403,60736,61802,62069]],[1597138480,[26880,47770,52847,67927,72498,72801,73105,73409,73652,73713]],[1597138481,[46535,48600,60258,71391,71489,71588,71686,71785,71864,71884]],[1597138482,[21908,34300,47445,57889,60271,60309,60673,62178,63382,63683]],[1597138483,[15956,32476,39720,70097,71212,74745,83114,90047,95020,96264]],[1597138484,[24633,42738,49020,60077,62275,64474,66608,68676,70331,70745]],[1597138485,[24467,41672,58878,64833,66024,67215,68406,69597,70550,70789]],[1597138486,[38104,51794,70436,93105,93839,94573,95306,96040,96627,96774]],[1597138487,[35029,37315,39602,66562,71954,77346,82738,88130,92444,93523]],[1597138488,[22243,37059,47345,59749,63489,65664,67839,70014,71754,72190]],[1597138489,[22016,31733,41451,65332,70108,74885,79661,84437,88258,89214]],[1597138490,[31795,40337,49119,62834,67379,68829,70279,71729,72889,73180]],[1597138491,[38924,46714,54505,61783,63239,64694,66150,67606,68770,69062]],[1597138492,[73041,73041,73041,73041,73041,73041,73041,73041,73041,73041]],[1597138493,[37711,40955,50453,59418,61865,68558,75252,81945,87300,88639]],[1597138494,[37594,47360,58001,76910,78334,80761,85197,89632,93180,94068]],[1597138495,[29714,54081,78448,79010,79123,79235,79348,79460,79550,79573]],[1597138496,[48293,55193,62093,68993,70373,71753,73133,74513,75617,75893]],[1597138497,[29042,40448,60131,72058,74369,79137,83906,88675,92490,93444]],[1597138498,[29135,29247,34771,45356,45754,46153,46552,46951,47270,47350]],[1597138499,[56497,57686,58875,60064,60301,60539,60777,61015,61205,61253]],[1597138500,[30375,36656,46496,64512,74931,82761,85412,88063,90183,90714]],[1597138501,[33753,52924,69151,90045,92775,97161,101548,105934,109443,110321]],[1597138502,[34987,36321,37656,38990,39257,39524,39791,40058,40271,40325]],[1597138503,[29059,43680,58027,72378,72391,78572,84753,90934,95879,97116]],[1597138504,[44020,45007,45995,46333,46401,46468,46536,46604,46658,46672]],[1597138505,[37935,39900,41865,43830,44223,44616,45009,45402,45716,45795]],[1597138506,[37060,41285,45510,50618,51639,52661,53682,54704,55521,55726]],[1597138507,[87646,87646,87646,87646,87646,87646,87646,87646,87646,87646]],[1597138508,null],[1597138509,[39696,69628,85544,90559,90982,91405,91828,92251,92590,92675]],[1597138510,[26048,31499,90643,92030,92323,92689,93201,93713,94122,94225]],[1597138511,[96431,96431,96431,96431,96431,96431,96431,96431,96431,96431]],[1597138512,null],[1597138513,[29817,47075,64130,97007,97303,97600,97897,98194,98431,98491]],[1597138514,[43065,43065,43065,43065,43065,43065,43065,43065,43065,43065]],[1597138515,[48702,48702,48702,48702,48702,48702,48702,48702,48702,48702]],[1597138516,[27618,33219,38820,44421,45542,46662,47782,48902,49798,50023]],[1597138517,[31911,32598,33285,56400,61023,65646,70269,74892,78590,79515]],[1597138518,[51381,51381,51381,51381,51381,51381,51381,51381,51381,51381]],[1597138519,null],[1597138520,[40998,40998,40998,40998,40998,40998,40998,40998,40998,40998]],[1597138521,[9130,22929,27790,29044,29639,30234,30829,31424,31900,32020]],[1597138522,[44078,44700,45323,48619,49278,49937,50596,51255,51783,51915]],[1597138523,null],[1597138524,[28892,28892,28892,28892,28892,28892,28892,28892,28892,28892]],[1597138525,[19005,19203,19401,19599,19639,19679,19718,19758,19790,19798]],[1597138526,[19131,23769,28408,33047,33975,34902,35830,36758,37500,37686]],[1597138527,[20922,21243,21488,34389,42047,49705,57363,65021,71147,72679]],[1597138528,[54213,65642,77072,78587,78890,79193,79496,79799,80041,80102]],[1597138529,[19777,19777,19777,19777,19777,19777,19777,19777,19777,19777]],[1597138530,[15382,19410,35993,36675,42315,47956,53596,59237,63749,64878]],[1597138531,[19174,28297,37421,38665,38914,39163,39412,39661,39860,39910]],[1597138532,[18843,18865,18887,40508,44832,49156,53480,57804,61264,62129]],[1597138533,[19088,19088,19088,19088,19088,19088,19088,19088,19088,19088]],[1597138534,[19293,30458,41623,43194,43508,43823,44137,44451,44703,44766]],[1597138535,[19633,31160,42687,54214,56520,58825,61131,63436,65280,65742]],[1597138536,[70846,70846,70846,70846,70846,70846,70846,70846,70846,70846]],[1597138537,[17653,17653,17653,17653,17653,17653,17653,17653,17653,17653]],[1597138538,null],[1597138539,[16692,17946,32497,52197,55538,58879,62219,65560,68232,68901]],[1597138540,[46937,46937,46937,46937,46937,46937,46937,46937,46937,46937]],[1597138541,[6780,12579,18379,19556,19791,20026,20262,20497,20685,20733]],[1597138542,[21003,21602,33323,46056,46880,47043,49432,59612,67756,69792]],[1597138543,[16255,22050,26127,46278,47253,48228,48951,49423,49800,49895]],[1597138544,[26684,32220,49085,57416,66564,75712,79098,81525,83466,83952]],[1597138545,[21172,27611,49058,78941,81200,83459,85718,87977,89784,90236]],[1597138546,[11755,32245,53075,73841,79922,80882,82453,86157,89121,89862]],[1597138547,[28747,38292,50332,79242,83328,83979,84207,85926,88965,89725]],[1597138548,[36799,51143,61954,72019,74975,75304,81922,87536,89837,90413]],[1597138549,[18970,38088,54776,65203,66463,67314,68917,73150,76537,77384]],[1597138550,[37320,55597,61456,75862,79483,81216,82950,84683,86070,86417]],[1597138551,[39034,39823,46546,55437,56278,58306,60335,62363,63986,64392]],[1597138552,[27566,42274,59251,66867,67622,68382,69153,69923,70539,70694]],[1597138553,[28082,28604,49535,72331,73555,74779,76003,77227,78206,78451]],[1597138554,[45016,45016,45016,45016,45016,45016,45016,45016,45016,45016]],[1597138555,[28684,42986,50903,63183,67401,69247,69737,70711,71575,71792]],[1597138556,[21787,29550,37314,46434,48258,50082,51906,53730,55189,55554]],[1597138557,[25613,31268,36923,41350,42236,43121,44007,44892,45600,45778]],[1597138558,null],[1597138559,[58072,59748,61425,65521,66340,67160,67979,68798,69454,69618]],[1597138560,[38989,55481,58381,71105,71735,72366,72996,73627,74131,74258]],[1597138561,[27865,27865,27865,27865,27865,27865,27865,27865,27865,27865]],[1597138562,[31185,33060,34935,52659,56203,59748,63293,66838,69674,70383]],[1597138563,[25485,26699,27913,29127,29370,29613,29856,30099,30293,30342]],[1597138564,[29127,42728,56329,62746,64030,65313,66597,67880,68907,69164]],[1597138565,null],[1597138566,[49349,53448,57548,61648,62468,63288,64108,64928,65584,65748]],[1597138567,null],[1597138568,[23736,23736,23736,23736,23736,23736,23736,23736,23736,23736]],[1597138569,null],[1597138570,[17023,22508,27993,33478,34575,35671,36769,37866,38743,38963]],[1597138571,[15307,33956,42337,53195,54301,55408,56515,57622,58507,58729]],[1597138572,null],[1597138573,null],[1597138574,[49006,49006,49006,49006,49006,49006,49006,49006,49006,49006]],[1597138575,[20921,20921,20921,20921,20921,20921,20921,20921,20921,20921]],[1597138576,[27418,27418,27418,27418,27418,27418,27418,27418,27418,27418]],[1597138577,null],[1597138578,[8902,20355,31809,43262,45553,47843,50134,52425,54257,54716]],[1597138579,null],[1597138580,[34526,34526,34526,34526,34526,34526,34526,34526,34526,34526]],[1597138581,null],[1597138582,null],[1597138583,null],[1597138584,null],[1597138585,null],[1597138586,null],[1597138587,null],[1597138588,null],[1597138589,null],[1597138590,null],[1597138591,null],[1597138592,[40412,40412,40412,40412,40412,40412,40412,40412,40412,40412]],[1597138593,null],[1597138594,null],[1597138595,null],[1597138596,null],[1597138597,null],[1597138598,null],[1597138599,null],[1597138600,null],[1597138601,null],[1597138602,null],[1597138603,null],[1597138604,null],[1597138605,null],[1597138606,null],[1597138607,null],[1597138608,null],[1597138609,null],[1597138610,null],[1597138611,null],[1597138612,null],[1597138613,null],[1597138614,null],[1597138615,null],[1597138616,null],[1597138617,null],[1597138618,[10066,10066,10066,10066,10066,10066,10066,10066,10066,10066]],[1597138619,null],[1597138620,null],[1597138621,null],[1597138622,null],[1597138623,null],[1597138624,null],[1597138625,null],[1597138626,null],[1597138627,null],[1597138628,null],[1597138629,null],[1597138630,null],[1597138631,null],[1597138632,null],[1597138633,null],[1597138634,null],[1597138635,null],[1597138636,null],[1597138637,null],[1597138638,null]]);
+
+var responseTimeChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container',
+    zoomType: 'x'
+  },
+  colors: ['#C4FD90', '#7FF77F', '#6FF2AD', '#60ECE5', '#51A8E7', '#4353E2', '#7335DC', '#BC28D7', '#D11C97', '#C73905', 'Orange'],
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    y: -65,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  navigator: { baseSeries: 9 },
+  rangeSelector: {
+    rangeSelector: { align: "left" },
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+        },
+        select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Response Time (ms)',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  plotOptions: {
+    arearange: { lineWidth: 1 },
+    series: {
+      dataGrouping: { enabled: false }
+    }
+  },
+  series: [
+  
+    
+         {
+pointInterval: 1000,
+name: 'min',
+data: responseTimePercentiles[0],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 10
+},
+         {
+pointInterval: 1000,
+name: '25%',
+data: responseTimePercentiles[1],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 9
+},
+         {
+pointInterval: 1000,
+name: '50%',
+data: responseTimePercentiles[2],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 8
+},
+         {
+pointInterval: 1000,
+name: '75%',
+data: responseTimePercentiles[3],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 7
+},
+         {
+pointInterval: 1000,
+name: '80%',
+data: responseTimePercentiles[4],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 6
+},
+         {
+pointInterval: 1000,
+name: '85%',
+data: responseTimePercentiles[5],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 5
+},
+         {
+pointInterval: 1000,
+name: '90%',
+data: responseTimePercentiles[6],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 4
+},
+         {
+pointInterval: 1000,
+name: '95%',
+data: responseTimePercentiles[7],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 3
+},
+         {
+pointInterval: 1000,
+name: '99%',
+data: responseTimePercentiles[8],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 2
+},
+         {
+pointInterval: 1000,
+name: 'max',
+data: responseTimePercentiles[9],
+tooltip: { yDecimals: 0, ySuffix: 'ms' },
+type : 'area',
+yAxis: 0,
+zIndex: 1
+},
+  allUsersData
+  ]
+});
+
+responseTimeChart.setTitle({
+  text: '<span class="chart_title chart_title_">Response Time Percentiles over Time (OK)</span>',
+  useHTML: true
+});
+
+var container_requests = unpack([[1597138325,[0,0, 0]],[1597138326,[0,0, 0]],[1597138327,[0,0, 0]],[1597138328,[0,0, 0]],[1597138329,[0,0, 0]],[1597138330,[0,0, 0]],[1597138331,[0,0, 0]],[1597138332,[0,0, 0]],[1597138333,[0,0, 0]],[1597138334,[0,0, 0]],[1597138335,[0,0, 0]],[1597138336,[0,0, 0]],[1597138337,[0,0, 0]],[1597138338,[0,0, 0]],[1597138339,[0,0, 0]],[1597138340,[0,0, 0]],[1597138341,[0,0, 0]],[1597138342,[0,0, 0]],[1597138343,[0,0, 0]],[1597138344,[0,0, 0]],[1597138345,[0,0, 0]],[1597138346,[0,0, 0]],[1597138347,[0,0, 0]],[1597138348,[0,0, 0]],[1597138349,[0,0, 0]],[1597138350,[0,0, 0]],[1597138351,[0,0, 0]],[1597138352,[0,0, 0]],[1597138353,[0,0, 0]],[1597138354,[16,1, 15]],[1597138355,[64,13, 51]],[1597138356,[9,0, 9]],[1597138357,[61,9, 52]],[1597138358,[10,1, 9]],[1597138359,[0,0, 0]],[1597138360,[0,0, 0]],[1597138361,[0,0, 0]],[1597138362,[0,0, 0]],[1597138363,[0,0, 0]],[1597138364,[0,0, 0]],[1597138365,[0,0, 0]],[1597138366,[0,0, 0]],[1597138367,[0,0, 0]],[1597138368,[0,0, 0]],[1597138369,[0,0, 0]],[1597138370,[0,0, 0]],[1597138371,[0,0, 0]],[1597138372,[0,0, 0]],[1597138373,[0,0, 0]],[1597138374,[0,0, 0]],[1597138375,[0,0, 0]],[1597138376,[2,2, 0]],[1597138377,[5,3, 2]],[1597138378,[0,0, 0]],[1597138379,[16,8, 8]],[1597138380,[2,2, 0]],[1597138381,[15,3, 12]],[1597138382,[9,3, 6]],[1597138383,[6,2, 4]],[1597138384,[6,1, 5]],[1597138385,[3,1, 2]],[1597138386,[1,0, 1]],[1597138387,[14,1, 13]],[1597138388,[18,2, 16]],[1597138389,[6,1, 5]],[1597138390,[10,4, 6]],[1597138391,[7,3, 4]],[1597138392,[11,4, 7]],[1597138393,[2,0, 2]],[1597138394,[26,8, 18]],[1597138395,[21,6, 15]],[1597138396,[20,8, 12]],[1597138397,[3,0, 3]],[1597138398,[5,1, 4]],[1597138399,[7,2, 5]],[1597138400,[1,1, 0]],[1597138401,[4,4, 0]],[1597138402,[8,6, 2]],[1597138403,[8,5, 3]],[1597138404,[0,0, 0]],[1597138405,[3,2, 1]],[1597138406,[9,3, 6]],[1597138407,[7,3, 4]],[1597138408,[4,0, 4]],[1597138409,[2,0, 2]],[1597138410,[0,0, 0]],[1597138411,[2,2, 0]],[1597138412,[2,0, 2]],[1597138413,[9,3, 6]],[1597138414,[15,4, 11]],[1597138415,[8,2, 6]],[1597138416,[1,0, 1]],[1597138417,[0,0, 0]],[1597138418,[6,3, 3]],[1597138419,[2,0, 2]],[1597138420,[0,0, 0]],[1597138421,[1,0, 1]],[1597138422,[5,2, 3]],[1597138423,[2,0, 2]],[1597138424,[0,0, 0]],[1597138425,[0,0, 0]],[1597138426,[2,0, 2]],[1597138427,[0,0, 0]],[1597138428,[1,1, 0]],[1597138429,[2,1, 1]],[1597138430,[3,2, 1]],[1597138431,[1,1, 0]],[1597138432,[1,1, 0]],[1597138433,[4,1, 3]],[1597138434,[0,0, 0]],[1597138435,[4,0, 4]],[1597138436,[7,3, 4]],[1597138437,[3,1, 2]],[1597138438,[13,3, 10]],[1597138439,[21,11, 10]],[1597138440,[21,11, 10]],[1597138441,[23,13, 10]],[1597138442,[23,9, 14]],[1597138443,[44,23, 21]],[1597138444,[25,9, 16]],[1597138445,[35,19, 16]],[1597138446,[47,26, 21]],[1597138447,[7,4, 3]],[1597138448,[1,0, 1]],[1597138449,[5,2, 3]],[1597138450,[2,1, 1]],[1597138451,[0,0, 0]],[1597138452,[4,2, 2]],[1597138453,[1,0, 1]],[1597138454,[1,0, 1]],[1597138455,[6,4, 2]],[1597138456,[2,0, 2]],[1597138457,[0,0, 0]],[1597138458,[5,3, 2]],[1597138459,[7,6, 1]],[1597138460,[2,2, 0]],[1597138461,[8,3, 5]],[1597138462,[14,6, 8]],[1597138463,[0,0, 0]],[1597138464,[2,0, 2]],[1597138465,[1,1, 0]],[1597138466,[3,3, 0]],[1597138467,[8,6, 2]],[1597138468,[3,2, 1]],[1597138469,[3,1, 2]],[1597138470,[4,3, 1]],[1597138471,[20,14, 6]],[1597138472,[16,9, 7]],[1597138473,[13,4, 9]],[1597138474,[5,0, 5]],[1597138475,[13,7, 6]],[1597138476,[12,7, 5]],[1597138477,[16,5, 11]],[1597138478,[25,16, 9]],[1597138479,[21,15, 6]],[1597138480,[14,8, 6]],[1597138481,[12,8, 4]],[1597138482,[17,7, 10]],[1597138483,[26,13, 13]],[1597138484,[15,6, 9]],[1597138485,[5,2, 3]],[1597138486,[12,3, 9]],[1597138487,[5,2, 3]],[1597138488,[14,8, 6]],[1597138489,[5,2, 3]],[1597138490,[8,2, 6]],[1597138491,[7,4, 3]],[1597138492,[2,1, 1]],[1597138493,[8,2, 6]],[1597138494,[9,2, 7]],[1597138495,[5,2, 3]],[1597138496,[2,0, 2]],[1597138497,[11,5, 6]],[1597138498,[5,0, 5]],[1597138499,[3,1, 2]],[1597138500,[9,2, 7]],[1597138501,[8,2, 6]],[1597138502,[3,1, 2]],[1597138503,[10,4, 6]],[1597138504,[5,2, 3]],[1597138505,[3,1, 2]],[1597138506,[8,5, 3]],[1597138507,[2,1, 1]],[1597138508,[1,1, 0]],[1597138509,[7,2, 5]],[1597138510,[7,0, 7]],[1597138511,[4,3, 1]],[1597138512,[1,1, 0]],[1597138513,[9,4, 5]],[1597138514,[3,2, 1]],[1597138515,[1,0, 1]],[1597138516,[4,2, 2]],[1597138517,[3,0, 3]],[1597138518,[1,0, 1]],[1597138519,[0,0, 0]],[1597138520,[2,1, 1]],[1597138521,[4,0, 4]],[1597138522,[5,2, 3]],[1597138523,[0,0, 0]],[1597138524,[1,0, 1]],[1597138525,[3,1, 2]],[1597138526,[3,1, 2]],[1597138527,[4,0, 4]],[1597138528,[4,1, 3]],[1597138529,[1,0, 1]],[1597138530,[7,2, 5]],[1597138531,[3,0, 3]],[1597138532,[3,0, 3]],[1597138533,[1,0, 1]],[1597138534,[6,3, 3]],[1597138535,[2,0, 2]],[1597138536,[2,1, 1]],[1597138537,[2,1, 1]],[1597138538,[0,0, 0]],[1597138539,[4,0, 4]],[1597138540,[1,0, 1]],[1597138541,[4,1, 3]],[1597138542,[13,3, 10]],[1597138543,[14,5, 9]],[1597138544,[10,2, 8]],[1597138545,[8,3, 5]],[1597138546,[12,2, 10]],[1597138547,[19,4, 15]],[1597138548,[21,6, 15]],[1597138549,[14,4, 10]],[1597138550,[15,9, 6]],[1597138551,[6,0, 6]],[1597138552,[10,3, 7]],[1597138553,[5,1, 4]],[1597138554,[2,1, 1]],[1597138555,[14,2, 12]],[1597138556,[4,1, 3]],[1597138557,[4,1, 3]],[1597138558,[0,0, 0]],[1597138559,[4,1, 3]],[1597138560,[7,2, 5]],[1597138561,[1,0, 1]],[1597138562,[4,1, 3]],[1597138563,[3,1, 2]],[1597138564,[5,2, 3]],[1597138565,[0,0, 0]],[1597138566,[3,1, 2]],[1597138567,[0,0, 0]],[1597138568,[1,0, 1]],[1597138569,[0,0, 0]],[1597138570,[2,0, 2]],[1597138571,[5,0, 5]],[1597138572,[0,0, 0]],[1597138573,[0,0, 0]],[1597138574,[1,0, 1]],[1597138575,[1,0, 1]],[1597138576,[1,0, 1]],[1597138577,[0,0, 0]],[1597138578,[2,0, 2]],[1597138579,[0,0, 0]],[1597138580,[1,0, 1]],[1597138581,[0,0, 0]],[1597138582,[0,0, 0]],[1597138583,[0,0, 0]],[1597138584,[0,0, 0]],[1597138585,[0,0, 0]],[1597138586,[0,0, 0]],[1597138587,[0,0, 0]],[1597138588,[0,0, 0]],[1597138589,[0,0, 0]],[1597138590,[0,0, 0]],[1597138591,[0,0, 0]],[1597138592,[1,0, 1]],[1597138593,[0,0, 0]],[1597138594,[0,0, 0]],[1597138595,[0,0, 0]],[1597138596,[0,0, 0]],[1597138597,[0,0, 0]],[1597138598,[0,0, 0]],[1597138599,[0,0, 0]],[1597138600,[0,0, 0]],[1597138601,[0,0, 0]],[1597138602,[0,0, 0]],[1597138603,[0,0, 0]],[1597138604,[0,0, 0]],[1597138605,[0,0, 0]],[1597138606,[0,0, 0]],[1597138607,[0,0, 0]],[1597138608,[0,0, 0]],[1597138609,[0,0, 0]],[1597138610,[0,0, 0]],[1597138611,[0,0, 0]],[1597138612,[0,0, 0]],[1597138613,[0,0, 0]],[1597138614,[0,0, 0]],[1597138615,[0,0, 0]],[1597138616,[0,0, 0]],[1597138617,[0,0, 0]],[1597138618,[1,0, 1]],[1597138619,[0,0, 0]],[1597138620,[0,0, 0]],[1597138621,[0,0, 0]],[1597138622,[0,0, 0]],[1597138623,[0,0, 0]],[1597138624,[0,0, 0]],[1597138625,[0,0, 0]],[1597138626,[0,0, 0]],[1597138627,[0,0, 0]],[1597138628,[0,0, 0]],[1597138629,[0,0, 0]],[1597138630,[0,0, 0]],[1597138631,[0,0, 0]],[1597138632,[0,0, 0]],[1597138633,[0,0, 0]],[1597138634,[0,0, 0]],[1597138635,[0,0, 0]],[1597138636,[0,0, 0]],[1597138637,[0,0, 0]],[1597138638,[0,0, 0]]]);
+
+var requestsChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container_requests',
+    zoomType: 'x'
+  },
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    itemDistance: 10,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  rangeSelector: {
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+         },
+         select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  plotOptions: {
+    series: {
+      dataGrouping: { enabled: false }
+    },
+    area: {
+      stacking: 'normal'
+    }
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Number of requests',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  series: [
+    {
+color: '#4572A7',
+name: 'All',
+data: container_requests[0],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+    allUsersData
+  ]
+});
+
+requestsChart.setTitle({
+  text: '<span class="chart_title">Number of requests per second</span>',
+  useHTML: true
+});
+
+var container_responses = unpack([[1597138325,[0,0, 0]],[1597138326,[0,0, 0]],[1597138327,[0,0, 0]],[1597138328,[0,0, 0]],[1597138329,[0,0, 0]],[1597138330,[0,0, 0]],[1597138331,[0,0, 0]],[1597138332,[0,0, 0]],[1597138333,[0,0, 0]],[1597138334,[0,0, 0]],[1597138335,[0,0, 0]],[1597138336,[0,0, 0]],[1597138337,[0,0, 0]],[1597138338,[0,0, 0]],[1597138339,[0,0, 0]],[1597138340,[0,0, 0]],[1597138341,[0,0, 0]],[1597138342,[0,0, 0]],[1597138343,[0,0, 0]],[1597138344,[0,0, 0]],[1597138345,[0,0, 0]],[1597138346,[0,0, 0]],[1597138347,[0,0, 0]],[1597138348,[0,0, 0]],[1597138349,[0,0, 0]],[1597138350,[0,0, 0]],[1597138351,[0,0, 0]],[1597138352,[0,0, 0]],[1597138353,[0,0, 0]],[1597138354,[0,0, 0]],[1597138355,[0,0, 0]],[1597138356,[0,0, 0]],[1597138357,[1,0, 1]],[1597138358,[2,0, 2]],[1597138359,[6,1, 5]],[1597138360,[8,0, 8]],[1597138361,[2,0, 2]],[1597138362,[8,3, 5]],[1597138363,[7,0, 7]],[1597138364,[2,0, 2]],[1597138365,[6,0, 6]],[1597138366,[6,1, 5]],[1597138367,[7,2, 5]],[1597138368,[7,1, 6]],[1597138369,[3,1, 2]],[1597138370,[3,0, 3]],[1597138371,[3,0, 3]],[1597138372,[7,1, 6]],[1597138373,[5,0, 5]],[1597138374,[3,1, 2]],[1597138375,[2,0, 2]],[1597138376,[3,0, 3]],[1597138377,[3,0, 3]],[1597138378,[1,0, 1]],[1597138379,[4,1, 3]],[1597138380,[2,0, 2]],[1597138381,[2,0, 2]],[1597138382,[2,0, 2]],[1597138383,[3,1, 2]],[1597138384,[2,0, 2]],[1597138385,[4,0, 4]],[1597138386,[0,0, 0]],[1597138387,[1,0, 1]],[1597138388,[3,0, 3]],[1597138389,[1,0, 1]],[1597138390,[4,0, 4]],[1597138391,[3,0, 3]],[1597138392,[2,1, 1]],[1597138393,[1,0, 1]],[1597138394,[1,1, 0]],[1597138395,[2,0, 2]],[1597138396,[2,0, 2]],[1597138397,[1,0, 1]],[1597138398,[2,0, 2]],[1597138399,[1,1, 0]],[1597138400,[2,0, 2]],[1597138401,[2,0, 2]],[1597138402,[2,0, 2]],[1597138403,[2,0, 2]],[1597138404,[3,0, 3]],[1597138405,[4,1, 3]],[1597138406,[6,0, 6]],[1597138407,[3,0, 3]],[1597138408,[2,0, 2]],[1597138409,[6,0, 6]],[1597138410,[1,0, 1]],[1597138411,[6,0, 6]],[1597138412,[4,0, 4]],[1597138413,[6,1, 5]],[1597138414,[3,0, 3]],[1597138415,[5,0, 5]],[1597138416,[3,0, 3]],[1597138417,[5,3, 2]],[1597138418,[8,4, 4]],[1597138419,[8,1, 7]],[1597138420,[2,0, 2]],[1597138421,[1,0, 1]],[1597138422,[4,0, 4]],[1597138423,[4,1, 3]],[1597138424,[3,1, 2]],[1597138425,[2,0, 2]],[1597138426,[7,0, 7]],[1597138427,[4,0, 4]],[1597138428,[3,0, 3]],[1597138429,[6,0, 6]],[1597138430,[2,0, 2]],[1597138431,[2,0, 2]],[1597138432,[3,0, 3]],[1597138433,[3,0, 3]],[1597138434,[3,0, 3]],[1597138435,[3,0, 3]],[1597138436,[3,0, 3]],[1597138437,[3,0, 3]],[1597138438,[6,0, 6]],[1597138439,[5,0, 5]],[1597138440,[6,0, 6]],[1597138441,[5,0, 5]],[1597138442,[5,1, 4]],[1597138443,[9,6, 3]],[1597138444,[6,4, 2]],[1597138445,[10,6, 4]],[1597138446,[4,3, 1]],[1597138447,[4,0, 4]],[1597138448,[0,0, 0]],[1597138449,[9,0, 9]],[1597138450,[2,0, 2]],[1597138451,[0,0, 0]],[1597138452,[4,0, 4]],[1597138453,[6,1, 5]],[1597138454,[2,0, 2]],[1597138455,[8,3, 5]],[1597138456,[2,1, 1]],[1597138457,[7,2, 5]],[1597138458,[6,4, 2]],[1597138459,[11,5, 6]],[1597138460,[5,2, 3]],[1597138461,[8,4, 4]],[1597138462,[12,8, 4]],[1597138463,[3,2, 1]],[1597138464,[9,2, 7]],[1597138465,[4,1, 3]],[1597138466,[5,1, 4]],[1597138467,[10,2, 8]],[1597138468,[3,1, 2]],[1597138469,[7,2, 5]],[1597138470,[2,0, 2]],[1597138471,[9,4, 5]],[1597138472,[4,0, 4]],[1597138473,[6,0, 6]],[1597138474,[2,0, 2]],[1597138475,[10,4, 6]],[1597138476,[7,1, 6]],[1597138477,[7,2, 5]],[1597138478,[3,1, 2]],[1597138479,[8,4, 4]],[1597138480,[8,3, 5]],[1597138481,[9,4, 5]],[1597138482,[3,1, 2]],[1597138483,[7,4, 3]],[1597138484,[5,0, 5]],[1597138485,[4,0, 4]],[1597138486,[6,0, 6]],[1597138487,[3,1, 2]],[1597138488,[10,3, 7]],[1597138489,[3,2, 1]],[1597138490,[8,2, 6]],[1597138491,[6,2, 4]],[1597138492,[3,2, 1]],[1597138493,[3,0, 3]],[1597138494,[4,1, 3]],[1597138495,[7,0, 7]],[1597138496,[0,0, 0]],[1597138497,[6,1, 5]],[1597138498,[6,2, 4]],[1597138499,[6,2, 4]],[1597138500,[6,2, 4]],[1597138501,[6,1, 5]],[1597138502,[4,1, 3]],[1597138503,[9,4, 5]],[1597138504,[5,1, 4]],[1597138505,[4,1, 3]],[1597138506,[10,4, 6]],[1597138507,[5,2, 3]],[1597138508,[1,1, 0]],[1597138509,[9,5, 4]],[1597138510,[11,4, 7]],[1597138511,[13,6, 7]],[1597138512,[2,1, 1]],[1597138513,[21,14, 7]],[1597138514,[8,5, 3]],[1597138515,[14,10, 4]],[1597138516,[9,6, 3]],[1597138517,[15,9, 6]],[1597138518,[5,2, 3]],[1597138519,[5,3, 2]],[1597138520,[9,6, 3]],[1597138521,[9,5, 4]],[1597138522,[14,7, 7]],[1597138523,[0,0, 0]],[1597138524,[4,3, 1]],[1597138525,[10,5, 5]],[1597138526,[6,2, 4]],[1597138527,[7,3, 4]],[1597138528,[9,3, 6]],[1597138529,[1,0, 1]],[1597138530,[9,5, 4]],[1597138531,[9,5, 4]],[1597138532,[14,7, 7]],[1597138533,[5,2, 3]],[1597138534,[10,6, 4]],[1597138535,[7,3, 4]],[1597138536,[4,2, 2]],[1597138537,[7,3, 4]],[1597138538,[4,1, 3]],[1597138539,[9,3, 6]],[1597138540,[4,2, 2]],[1597138541,[6,3, 3]],[1597138542,[15,11, 4]],[1597138543,[18,11, 7]],[1597138544,[12,8, 4]],[1597138545,[13,8, 5]],[1597138546,[21,14, 7]],[1597138547,[18,14, 4]],[1597138548,[20,15, 5]],[1597138549,[16,9, 7]],[1597138550,[13,8, 5]],[1597138551,[10,5, 5]],[1597138552,[6,1, 5]],[1597138553,[9,1, 8]],[1597138554,[1,0, 1]],[1597138555,[7,1, 6]],[1597138556,[1,0, 1]],[1597138557,[8,2, 6]],[1597138558,[0,0, 0]],[1597138559,[5,2, 3]],[1597138560,[8,4, 4]],[1597138561,[1,0, 1]],[1597138562,[7,4, 3]],[1597138563,[5,1, 4]],[1597138564,[8,4, 4]],[1597138565,[1,0, 1]],[1597138566,[11,4, 7]],[1597138567,[2,1, 1]],[1597138568,[6,2, 4]],[1597138569,[2,1, 1]],[1597138570,[3,1, 2]],[1597138571,[11,5, 6]],[1597138572,[2,1, 1]],[1597138573,[4,1, 3]],[1597138574,[1,0, 1]],[1597138575,[7,2, 5]],[1597138576,[1,0, 1]],[1597138577,[3,1, 2]],[1597138578,[10,5, 5]],[1597138579,[8,5, 3]],[1597138580,[7,5, 2]],[1597138581,[5,2, 3]],[1597138582,[7,3, 4]],[1597138583,[5,2, 3]],[1597138584,[2,1, 1]],[1597138585,[12,6, 6]],[1597138586,[4,1, 3]],[1597138587,[8,4, 4]],[1597138588,[10,4, 6]],[1597138589,[3,1, 2]],[1597138590,[10,5, 5]],[1597138591,[5,2, 3]],[1597138592,[7,2, 5]],[1597138593,[8,4, 4]],[1597138594,[10,1, 9]],[1597138595,[2,0, 2]],[1597138596,[3,0, 3]],[1597138597,[2,0, 2]],[1597138598,[3,0, 3]],[1597138599,[7,3, 4]],[1597138600,[7,1, 6]],[1597138601,[4,0, 4]],[1597138602,[2,0, 2]],[1597138603,[6,3, 3]],[1597138604,[3,1, 2]],[1597138605,[5,1, 4]],[1597138606,[1,0, 1]],[1597138607,[4,2, 2]],[1597138608,[7,1, 6]],[1597138609,[5,2, 3]],[1597138610,[3,1, 2]],[1597138611,[6,1, 5]],[1597138612,[2,0, 2]],[1597138613,[0,0, 0]],[1597138614,[2,0, 2]],[1597138615,[5,0, 5]],[1597138616,[3,1, 2]],[1597138617,[4,1, 3]],[1597138618,[3,1, 2]],[1597138619,[0,0, 0]],[1597138620,[4,2, 2]],[1597138621,[5,2, 3]],[1597138622,[5,3, 2]],[1597138623,[5,2, 3]],[1597138624,[4,1, 3]],[1597138625,[4,1, 3]],[1597138626,[2,1, 1]],[1597138627,[3,2, 1]],[1597138628,[4,1, 3]],[1597138629,[5,2, 3]],[1597138630,[4,3, 1]],[1597138631,[9,6, 3]],[1597138632,[18,14, 4]],[1597138633,[4,2, 2]],[1597138634,[10,8, 2]],[1597138635,[2,0, 2]],[1597138636,[3,1, 2]],[1597138637,[12,12, 0]],[1597138638,[1,0, 1]]]);
+
+var requestsChart = new Highcharts.StockChart({
+  chart: {
+    renderTo: 'container_responses',
+    zoomType: 'x'
+  },
+  credits: { enabled: false },
+  legend: {
+    enabled: true,
+    floating: true,
+    itemDistance: 10,
+    y: -285,
+    borderWidth: 0,
+    itemStyle: { fontWeight: "normal" }
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  rangeSelector: {
+    buttonSpacing: 0,
+    buttonTheme: {
+      fill: 'LightGrey',
+      padding: 1,
+      stroke: 'Black',
+      'stroke-width': 0.25,
+      style: {
+        color: 'Black',
+        fontWeight: 'bold',
+      },
+      states: {
+        stroke: 'Black',
+        'stroke-width': 0.25,
+        hover: {
+          fill: 'DarkGrey',
+          style: { color: 'black' }
+         },
+         select: {
+          fill: 'DarkOrange',
+          style: { color: 'white' }
+        }
+      }
+    },
+    buttons : [
+      {
+        type : 'minute',
+        count : 1,
+        text : '1m'
+      }, {
+        type : 'minute',
+        count : 10,
+        text : '10m'
+      }, {
+        type : 'hour',
+        count : 1,
+        text : '1h'
+      }, {
+        type : 'all',
+        count : 1,
+        text : 'All'
+      }
+    ],
+    selected : 3,
+    inputEnabled : false
+  },
+  plotOptions: {
+    series: {
+      dataGrouping: { enabled: false }
+    },
+    area: {
+      stacking: 'normal'
+    }
+  },
+  xAxis: {
+    type: 'datetime',
+    ordinal: false,
+    maxZoom: 10000 // three days
+  },
+  yAxis:[
+    {
+      min: 0,
+      title: {
+        text: 'Number of responses',
+        style: { color: '#4572A7' }
+      },
+      opposite: false
+    }, {
+      min: 0,
+      title: {
+        text: 'Active Users',
+        style: { color: '#FF9D00' }
+      },
+      opposite: true
+    }
+  ],
+  series: [
+    {
+color: '#4572A7',
+name: 'All',
+data: container_responses[0],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+},
+{
+color: '#FF0000',
+name: 'KO',
+data: container_responses[1],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+{
+color: '#A0B228',
+name: 'OK',
+data: container_responses[2],
+tooltip: { yDecimals: 0, ySuffix: '', valueDecimals: 0 }
+,type: 'area'},
+    allUsersData,
+{
+  
+type: 'pie',
+name: 'Distribution',
+data: [
+  {name: 'OK', y: 964.0, color: '#A0B228'},{name: 'KO', y: 570.0, color: '#FF0000'}
+],
+center: [775, -40],
+size: 70,
+showInLegend: false,
+dataLabels: { enabled: false },
+dataGrouping: { enabled: false }
+
+}
+
+  ]
+});
+
+requestsChart.setTitle({
+  text: '<span class="chart_title">Number of responses per second</span>',
+  useHTML: true
+});
+
+var scatterChart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'container_response_time_dispersion', 
+    defaultSeriesType: 'scatter',
+    zoomType: 'xy'
+  },
+  credits: { enabled: false },
+  xAxis: {
+    title: {
+      enabled: true,
+      text: 'Global number of requests per second',
+      style: { fontWeight: 'bold' }
+    },
+    startOnTick: true,
+    endOnTick: true,
+    showLastLabel: true,
+    min: 0
+  },
+  title: { text: 'A title to let highcharts reserve the place for the title set later' },
+  yAxis: {
+    min: 0,
+    title: { text: 'Response Time' }
+  },
+  tooltip: {
+    formatter: function() {
+         return ''+ this.y +' ms at ' + this.x + ' allreq/s';
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'left',
+    verticalAlign: 'top',
+    x: 80,
+    y: 10,
+    floating: true,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderRadius: 3,
+    itemStyle: {
+      fontWeight: "normal",
+      color: "#274B6D"
+    }
+  },
+  plotOptions: {
+    scatter: {
+      marker: {
+        radius: 3,
+        states: {
+          hover: {
+            enabled: true,
+            lineColor: 'rgb(100,100,100)'
+          }
+        }
+      },
+      states: {
+        hover: {
+          marker: { enabled: false }
+        }
+      }
+    }
+  },
+  series: [
+	  {
+type: 'scatter',
+color: 'rgba(69, 114, 167, .2)',
+name: 'OK',
+data: [
+[3,27865],[5,19777],[5,27418],[5,10066],[6,49006],[7,70846],[7,46937],[7,23736],[7,37866],[8,19088],[8,45016],[8,68798],[8,20921],[9,40058],[9,63436],[9,17653],[9,53730],[9,44892],[9,34526],[10,45688],[10,43065],[10,28892],[10,30099],[10,64928],[11,63286],[11,36961],[11,87646],[11,51381],[11,40412],[12,57114],[12,70911],[12,46613],[12,74513],[13,73041],[13,46604],[13,67880],[14,33658],[14,67631],[14,70252],[14,79460],[14,45402],[14,48702],[14,40998],[14,31424],[14,20497],[14,77227],[14,66838],[14,52425],[15,72533],[15,19758],[15,65560],[16,77523],[16,54704],[16,48902],[16,36758],[16,65021],[16,79799],[17,34451],[17,38263],[17,66974],[17,69597],[17,67606],[17,61015],[17,105934],[17,90934],[17,96431],[17,74892],[17,39661],[17,73627],[18,46951],[18,92251],[18,93713],[19,65480],[19,40371],[19,52234],[19,81945],[19,88675],[19,57622],[20,88063],[20,51255],[20,59237],[20,57804],[20,62363],[21,55120],[21,92112],[21,84437],[21,69923],[22,47559],[22,73409],[22,68676],[22,96040],[22,71729],[23,46039],[23,51431],[23,89632],[23,44451],[24,67302],[25,40083],[25,49328],[25,68068],[25,88130],[25,70711],[26,69202],[26,66709],[27,54146],[27,71785],[28,63607],[28,63509],[28,57653],[29,87977],[29,84683],[30,60396],[30,72373],[30,66246],[30,60736],[30,98194],[31,81525],[33,17984],[33,63977],[33,44222],[33,73190],[33,73150],[34,67627],[34,58720],[36,44157],[36,54685],[36,62178],[37,61699],[37,70014],[38,56291],[38,67845],[38,59612],[39,50840],[39,49423],[40,47413],[40,66323],[40,28266],[40,85926],[42,61120],[42,67626],[42,86157],[43,60218],[44,90047],[48,67527],[48,87536],[49,75156],[50,45709],[51,58514],[52,46489],[53,35045],[55,52686],[57,29256],[61,34250],[63,67945],[63,73770],[68,68026],[71,38317],[72,41178],[72,72061],[73,38769],[74,67452],[77,76667],[83,50162],[84,71794],[88,37608],[91,66672],[94,71851],[100,44513],[111,32627],[135,35196],[143,54705],[192,65382],[208,49789],[241,50537],[271,55196],[361,52043]
+]},
+	  {
+type: 'scatter',
+color: 'rgba(255, 0, 0, .2)',
+name: 'KO',
+data: [
+[6,84243],[6,108871],[7,69346],[8,77687],[8,74156],[9,77682],[9,129206],[9,73297],[9,72843],[9,76954],[10,122728],[10,71084],[10,66697],[11,85867],[11,142742],[11,127350],[12,83227],[12,79048],[13,80325],[13,87079],[13,115882],[13,67985],[14,78857],[14,78276],[14,94182],[14,112106],[14,66427],[14,65985],[14,74530],[14,71717],[15,76958],[15,83390],[15,83323],[15,91751],[16,107570],[16,99586],[16,72535],[16,92506],[17,68476],[17,82954],[17,96260],[17,105787],[17,88168],[17,90211],[17,83276],[17,120225],[17,69837],[18,126285],[19,68983],[19,92833],[19,80604],[19,107112],[19,90874],[20,88298],[20,76104],[20,70845],[20,100054],[21,88105],[21,106953],[21,91935],[21,84433],[22,103530],[22,99858],[22,103037],[22,103270],[23,84207],[23,98472],[24,74878],[25,62324],[25,85083],[25,87998],[25,97039],[25,72152],[26,81836],[26,75350],[27,75399],[27,86778],[28,72608],[28,84933],[28,81063],[28,108116],[29,91736],[29,82538],[30,84157],[30,77154],[30,69793],[30,89429],[30,124315],[31,93000],[33,83242],[33,89884],[33,83065],[34,85420],[34,90004],[36,69621],[36,89367],[36,93605],[37,81482],[37,97503],[38,86284],[38,107204],[38,66553],[39,66158],[39,92916],[40,62843],[40,96156],[40,72551],[40,85237],[42,83084],[42,82695],[42,90867],[43,65289],[44,99035],[48,89996],[48,79359],[48,84348],[49,66398],[51,87936],[55,68475],[61,61104],[63,91167],[63,91958],[68,65075],[68,94800],[71,66789],[72,65804],[72,58858],[74,93601],[76,66871],[77,96111],[83,72072],[84,60880],[91,64036],[94,67889],[100,137863],[107,94320],[111,93083],[192,92779],[208,40920],[241,65282],[271,4734],[361,60819]
+]}
+	]
+});
+
+scatterChart.setTitle({
+  text: '<span class="chart_title">Response Time against Global RPS</span>',
+  useHTML: true
+});
+
+    });
+</script>
+</body>
+</html>
